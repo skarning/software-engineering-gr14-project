@@ -1,0 +1,20 @@
+@startuml
+start
+:Visit webpage;
+note left: Person wants to find an event
+:Find calendar;
+:See an event;
+if (Member of club?) then (yes)
+    :Contact club coach;
+    :Get signed up by coach;
+else (no)
+    :Contact arranging club;
+    :Get signed up by that club as individual participant;
+note right: If the event is open to non-club members
+endif
+:Pay potential fees;
+:Participate;
+:????;
+:Profit;
+stop
+@enduml
