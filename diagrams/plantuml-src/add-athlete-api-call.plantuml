@@ -1,0 +1,4 @@
+@startuml
+Client -> Server: Add: /api/add-athlete/athlete
+Server -> Client: status: 200 OK
+@enduml

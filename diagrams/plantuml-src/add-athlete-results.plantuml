@@ -1,0 +1,7 @@
+@startuml
+User -> Application: Add athlete results
+Application -> API: Check results
+API -> Database: Upload results
+API --> Application: Status:OK
+Application --> User: Message: Upload was succsessfull
+@enduml
