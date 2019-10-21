@@ -1,0 +1,4 @@
+@startuml
+Client -> Server: Get: /api/athlete-results/event
+Server --> Client: status: 200 OK, athlete results
+@enduml
