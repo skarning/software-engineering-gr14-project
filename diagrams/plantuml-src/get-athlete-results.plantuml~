@@ -1,8 +1,0 @@
-@startuml
-User -> Website: Clicks on results for an event
-Website -> API: Get results for event
-API -> Database: Get results for event
-Database --> API: event results
-API --> Website: Format results
-Website --> User: Display results
-@enduml
