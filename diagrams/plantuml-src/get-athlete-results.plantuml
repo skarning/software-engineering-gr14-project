@@ -1,8 +1,13 @@
 @startuml
+actor User
+participant Website
+database API
+database Database
+
 User -> Website: Clicks on results for an event
 Website -> API: Get results for event
 API -> Database: Get results for event
 Database --> API: event results
-API --> Website: Format results
+API --> Website: List of events
 Website --> User: Display results
 @enduml
