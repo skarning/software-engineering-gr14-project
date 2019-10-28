@@ -1,0 +1,18 @@
+@startuml
+title Register a team in the application
+
+actor Club
+participant Application
+database API
+database Database
+
+Club -> Application ++ : Select team members
+Club -> Application : Click send
+Application -> API -- : registerMember\n(json: File, team: String, eventId: int)
+return Response
+API -> API: Validate data
+API -> Database : Fill data
+return Response
+API --> Application : List with members
+Application --> Club : showResponse(OK: bool, error)
+@enduml
