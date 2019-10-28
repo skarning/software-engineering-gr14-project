@@ -24,14 +24,25 @@ hs_err_pid*
 
 # .idea files for client and model modules
 /.idea/
+/sports-app/.idea/
 /sports-app/client/.idea/
 /sports-app/models/.idea/
 
+<<<<<<< HEAD
+=======
+# Maven
+log/
+target/
+
+>>>>>>> setting-up-javafx-with-maven
 # Intellij
 .idea/
 *.iml
 *.iws
+<<<<<<< HEAD
 
 # Maven
 log/
 target/
+=======
+>>>>>>> setting-up-javafx-with-maven
