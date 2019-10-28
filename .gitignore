@@ -24,14 +24,15 @@ hs_err_pid*
 
 # .idea files for client and model modules
 /.idea/
+/sports-app/.idea/
 /sports-app/client/.idea/
 /sports-app/models/.idea/
+
+# Maven
+log/
+target/
 
 # Intellij
 .idea/
 *.iml
 *.iws
-
-# Maven
-log/
-target/
