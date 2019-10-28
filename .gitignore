@@ -28,30 +28,12 @@ hs_err_pid*
 /sports-app/client/.idea/
 /sports-app/models/.idea/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8a275aafada0d7f66a0775ea4b9199fce7092c1d
 # Maven
 log/
 target/
 
-<<<<<<< HEAD
->>>>>>> setting-up-javafx-with-maven
-=======
->>>>>>> 8a275aafada0d7f66a0775ea4b9199fce7092c1d
 # Intellij
 .idea/
 *.iml
 *.iws
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-# Maven
-log/
-target/
-=======
->>>>>>> setting-up-javafx-with-maven
-=======
->>>>>>> 8a275aafada0d7f66a0775ea4b9199fce7092c1d
