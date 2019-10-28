@@ -26,3 +26,12 @@ hs_err_pid*
 /.idea/
 /sports-app/client/.idea/
 /sports-app/models/.idea/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
