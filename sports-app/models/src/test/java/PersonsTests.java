@@ -18,6 +18,10 @@ public class PersonsTests {
      */
     @BeforeEach
     public void setup() {
+        /* Person is an abstract class.
+        A mock object of person is created
+        to test its functionality
+         */
         person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.testPersonId, this.testFirstName,
                 this.testLastName, this.testAge).defaultAnswer(Mockito.CALLS_REAL_METHODS));
     }
@@ -25,5 +29,25 @@ public class PersonsTests {
     @Test
     public void getFullName_firstName_lastName() {
         assertEquals(testFullName, this.person.getFullName());
+    }
+
+    @Test
+    void getFirstName_firstName() {
+        assertEquals(testFirstName, this.person.getFirstName());
+    }
+
+    @Test
+    void getLastName_lastName() {
+        assertEquals(testLastName, this.person.getLastName());
+    }
+
+    @Test
+    void getAge_age() {
+        assertEquals(testAge, this.person.getAge());
+    }
+
+    @Test
+    void getPersonId_personId() {
+        assertEquals(testPersonId, this.person.getPersonId());
     }
 }
