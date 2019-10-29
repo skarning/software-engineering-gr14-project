@@ -1,3 +1,4 @@
+import models.Person;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -6,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonsTests {
     Person person;
 
-    private final int    testId = 1;
+    private final int    testPersonId = 1;
     private final String testFirstName = "lisa";
     private final String testLastName = "prat";
     private final String testFullName = "lisa prat";
@@ -17,7 +18,7 @@ public class PersonsTests {
      */
     @BeforeEach
     public void setup() {
-        person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.testId, this.testFirstName,
+        person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.testPersonId, this.testFirstName,
                 this.testLastName, this.testAge).defaultAnswer(Mockito.CALLS_REAL_METHODS));
     }
 
