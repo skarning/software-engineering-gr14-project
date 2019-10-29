@@ -22,7 +22,7 @@ public class PersonsTests {
         A mock object of person is created
         to test its functionality
          */
-        person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.testPersonId, this.testFirstName,
+        this.person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.testPersonId, this.testFirstName,
                 this.testLastName, this.testAge).defaultAnswer(Mockito.CALLS_REAL_METHODS));
     }
 
