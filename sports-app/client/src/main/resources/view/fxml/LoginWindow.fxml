@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginWindowController">
+    <StackPane />
+      <Button fx:id="loginButtonAdmin" layoutX="308.0" layoutY="168.0" onAction="#goToClubWindowWhenClicked" mnemonicParsing="false" text="Admin" textAlignment="CENTER">
+          <font>
+              <Font size="15.0" />
+          </font>
+      </Button>
+      <Button fx:id="loginButtonClub" layoutX="224.0" layoutY="168.0" onAction="#goToAdminWindowWhenClicked" mnemonicParsing="false" text="Club" textAlignment="CENTER">
+          <font>
+              <Font size="15.0" />
+          </font>
+      </Button>
+</AnchorPane>
