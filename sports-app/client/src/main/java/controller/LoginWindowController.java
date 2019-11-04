@@ -20,14 +20,12 @@ public class LoginWindowController implements ILoginWindowController {
     @FXML
     @Override
     public void goToClubWindowWhenClicked() {
-        mainJavaFx = new MainJavaFX();
         mainJavaFx.clubWindow(new Stage());
     }
 
     @FXML
     @Override
     public void goToAdminWindowWhenClicked() {
-        mainJavaFx = new MainJavaFX();
         mainJavaFx.adminWindow(new Stage());
     }
 }
