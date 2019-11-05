@@ -13,8 +13,8 @@ public class LoginWindowController implements ILoginWindowController {
     private MainJavaFX mainJavaFx = new MainJavaFX();
 
     public void initialize() {
-        loginButtonClub = new Button("Club");
-        loginButtonAdmin = new Button("Admin");
+        loginButtonClub.setText("Club");
+        loginButtonAdmin.setText("Admin");
     }
 
     @FXML
