@@ -8,21 +8,14 @@ public class UserTests {
     private User user;
 
     // User test variables
-    private final int    testUserId = 1;
-    private final String testUserName = "foo";
-    private final String testPassword = "pass";
-
-    // Person test Variables
-    private final int    testPersonId = 1;
-    private final String testFirstName = "lisa";
-    private final String testLastName = "prat";
-    private final String testFullName = "lisa prat";
-    private final int    testAge = 20;
+    private static final int    testUserId = 1;
+    private static final String testUserName = "foo";
+    private static final String testPassword = "pass";
 
     @BeforeEach
     public void Setup() {
-        this.user = new User(this.testUserId, this.testUserName, this.testPassword, this.testPersonId,
-                this.testFirstName, this.testLastName, this.testAge);
+        this.user = new User(this.testUserId, this.testUserName, this.testPassword, PersonsTests.testPersonId,
+                PersonsTests.testFirstName, PersonsTests.testLastName, PersonsTests.testAge);
     }
 
     @Test
