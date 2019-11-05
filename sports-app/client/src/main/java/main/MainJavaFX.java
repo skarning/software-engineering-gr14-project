@@ -1,6 +1,5 @@
 package main;
 
-import controller.LoginWindowController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,12 +35,10 @@ public class MainJavaFX extends Application {
             String javaVersion = System.getProperty("java.version");
             String javafxVersion = System.getProperty("javafx.version");
             */
-
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/LoginWindow.fxml"));
             primaryStage.setTitle("Please login");
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
-
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
         }
