@@ -1,0 +1,18 @@
+@startuml
+
+title Submit results
+start
+:Open application;
+note left: Club wants to submit results from a competition
+:Find form for adding results;
+repeat :Fill in information;
+repeat while (Form filled correctly?) is (no)
+->yes;
+repeat :Send results;
+note left: Results will be sent to API
+backward: Message: Upload was unsuccessful, submit again;
+repeat while (Upload was successful) is (no)
+-> yes;
+:Message: Upload was successful;
+
+@enduml
