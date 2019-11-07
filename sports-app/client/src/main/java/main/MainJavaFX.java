@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainJavaFX extends Application {
+public class MainJavaFX extends Application implements IMainJavaFX {
 
     private Stage primaryStage;
     private Stage loginWindow;
@@ -29,7 +29,8 @@ public class MainJavaFX extends Application {
         loginWindow();
     }
 
-    private void loginWindow() throws IOException {
+    @Override
+    public void loginWindow() {
         try {
             /*
             String javaVersion = System.getProperty("java.version");
@@ -41,9 +42,12 @@ public class MainJavaFX extends Application {
             primaryStage.show();
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
+        } catch (IOException ioe) {
+            System.out.println(ioe.getMessage());
         }
     }
 
+    @Override
     public void clubWindow(Stage clubStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/ClubWindow.fxml"));
@@ -59,6 +63,7 @@ public class MainJavaFX extends Application {
         }
     }
 
+    @Override
     public void adminWindow(Stage adminStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/AdminWindow.fxml"));
@@ -76,5 +81,9 @@ public class MainJavaFX extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
+    }
+
+    @Override
+    public void stop() {
     }
 }
