@@ -37,3 +37,6 @@ target/
 *.iml
 *.iws
 
+# Gradle
+*.gradle
+gradle*
