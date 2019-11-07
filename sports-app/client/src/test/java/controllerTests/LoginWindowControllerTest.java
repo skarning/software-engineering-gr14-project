@@ -12,6 +12,8 @@ import static org.testfx.matcher.control.LabeledMatchers.hasText;
 class LoginWindowControllerTest {
 
     private LoginWindowController loginWindowController = new LoginWindowController();
+    private final String CLUB_BUTTON_TEXT = "Club";
+    private final String ADMIN_BUTTON_TEXT = "Admin";
 
     @BeforeAll
     static void setUpClass() throws InterruptedException {
@@ -29,14 +31,12 @@ class LoginWindowControllerTest {
 
     @Test
     void correctTextIsSetFromMethodThatSetTextOnClub() {
-        final String clubButtonText = "Club";
-        assertEquals(clubButtonText, loginWindowController.setTextOnLoginButtonClub());
+        assertEquals(CLUB_BUTTON_TEXT, loginWindowController.setTextOnLoginButtonClub());
     }
 
     @Test
     void correctTextIsSetFromMethodThatSetTextOnAdmin() {
-        final String adminButtonText = "Admin";
-        assertEquals(adminButtonText, loginWindowController.setTextOnLoginButtonAdmin());
+        assertEquals(ADMIN_BUTTON_TEXT, loginWindowController.setTextOnLoginButtonAdmin());
     }
 
     @Test
