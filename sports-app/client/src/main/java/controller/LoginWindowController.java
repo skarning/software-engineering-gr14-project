@@ -7,6 +7,11 @@ import main.MainJavaFX;
 
 public class LoginWindowController implements ILoginWindowController {
 
+    @FXML
+    private Button loginButtonClub, loginButtonAdmin;
+
+    private MainJavaFX mainJavaFx = new MainJavaFX();
+
     public Button getLoginButtonClub() {
         return loginButtonClub;
     }
@@ -14,11 +19,6 @@ public class LoginWindowController implements ILoginWindowController {
     public Button getLoginButtonAdmin() {
         return loginButtonAdmin;
     }
-
-    @FXML
-    private Button loginButtonClub, loginButtonAdmin;
-
-    private MainJavaFX mainJavaFx = new MainJavaFX();
 
     public void initialize() {
         loginButtonClub.setText(setTextOnLoginButtonClub());

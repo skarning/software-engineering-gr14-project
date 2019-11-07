@@ -6,13 +6,15 @@ import main.MainJavaFX;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testfx.api.FxAssert.*;
+import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
 class LoginWindowControllerTest {
 
     private LoginWindowController loginWindowController = new LoginWindowController();
 
     @BeforeAll
-    public static void setUpClass() throws InterruptedException {
+    static void setUpClass() throws InterruptedException {
         System.out.println("About to launch the application");
         Thread thread = new Thread("JavaFX Init Thread") {
             public void run() {
@@ -24,7 +26,6 @@ class LoginWindowControllerTest {
         System.out.println("Success: Application has been launched");
         Thread.sleep(500);
     }
-
 
     @Test
     void correctTextIsSetFromMethodThatSetTextOnClub() {
@@ -39,10 +40,13 @@ class LoginWindowControllerTest {
     }
 
     @Test
-    void goToClubWindowWhenClicked() {
+    void checkThatClubLoginButtonHasCorrectText() {
+        verifyThat("#loginButtonClub", hasText("Club"));
     }
 
     @Test
-    void goToAdminWindowWhenClicked() {
+    void checkThatAdminLoginButtonHasCorrectText() {
+        verifyThat("#loginButtonAdmin", hasText("Admin"));
     }
+
 }
