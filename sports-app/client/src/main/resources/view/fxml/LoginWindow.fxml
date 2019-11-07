@@ -4,15 +4,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.layout.StackPane?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginWindowController">
-    <Button fx:id="loginButtonAdmin" layoutX="308.0" layoutY="168.0" onAction="#goToClubWindowWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
-        <font>
-            <Font size="15.0" />
-        </font>
-    </Button>
-    <Button fx:id="loginButtonClub" layoutX="224.0" layoutY="168.0" onAction="#goToAdminWindowWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
-        <font>
-            <Font size="15.0" />
-        </font>
-    </Button>
+    <StackPane>
+        <Button fx:id="loginButtonAdmin" layoutX="308.0" layoutY="168.0" onAction="#goToClubWindowWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="loginButtonClub" layoutX="224.0" layoutY="168.0" onAction="#goToAdminWindowWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </StackPane>
 </AnchorPane>
