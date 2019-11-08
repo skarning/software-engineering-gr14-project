@@ -8,9 +8,9 @@ public class UserTests {
     private User user;
 
     // User test variables
-    private static final int    testUserId = 1;
-    private static final String testUserName = "foo";
-    private static final String testPassword = "pass";
+    protected static final int    testUserId = 1;
+    protected static final String testUserName = "foo";
+    protected static final String testPassword = "pass";
 
     @BeforeEach
     public void Setup() {

@@ -13,6 +13,10 @@ public class UserRepository implements IRepository<User>{
 
     @Override
     public User getById(int id) {
+        for (User user : users){
+            if (user.getUserId() == id)
+                    return user;
+        }
         return null;
     }
 
