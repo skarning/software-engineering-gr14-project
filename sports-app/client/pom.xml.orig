@@ -59,5 +59,49 @@
             <artifactId>javafx-controls</artifactId>
             <version>13</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+<<<<<<< HEAD
+            <artifactId>javafx-controls</artifactId>
+            <version>12.0.2</version>
+=======
+            <artifactId>javafx-media</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.23.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-core</artifactId>
+            <version>4.0.16-alpha</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>sports-app</groupId>
+            <artifactId>models</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+>>>>>>> 0a9668db419d39201cc127bc7e01e7c108851f05
+        </dependency>
     </dependencies>
 </project>
