@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+:Applikasjon: as A
+:Klubb: as K
+(Klubb-bruker fyller ut skjema\n for nytt arrangement) as K1
+
+K --> K1
+(Applikasjon lagrer arrangement\n i Google Calendar) <-- A
+(Applikasjon sender klubb-bruker til kalender) <-- A
+
+K1 --> A
+@enduml
