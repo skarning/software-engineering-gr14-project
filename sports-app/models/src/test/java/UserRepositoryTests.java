@@ -1,3 +1,4 @@
+import Enumerations.Enums;
 import models.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,8 +13,8 @@ public class UserRepositoryTests {
     @BeforeEach
     public void setup() {
         this.repository = new UserRepository();
-        this.user = new User(UserTests.testUserId, UserTests.testUserName, UserTests.testPassword, PersonsTests.testPersonId,
-                PersonsTests.testFirstName, PersonsTests.testLastName, PersonsTests.testAge);
+        this.user = new User(UserTests.TEST_USER_ID, UserTests.TEST_USER_NAME, UserTests.TEST_PASSWORD, PersonsTests.TEST_PERSON_ID,
+                PersonsTests.TEST_FIRST_NAME, PersonsTests.TEST_LAST_NAME, PersonsTests.TEST_AGE, Enums.UserLevels.club);
     }
 
     @Test
@@ -39,9 +40,9 @@ public class UserRepositoryTests {
      */
     @Test
     public void deleteUser_delete_a_specific_user() {
-        User testUser = this.repository.getById(UserTests.testUserId);
+        User testUser = this.repository.getById(UserTests.TEST_USER_ID);
         repository.delete(user);
-        testUser = this.repository.getById(UserTests.testUserId);
+        testUser = this.repository.getById(UserTests.TEST_USER_ID);
         assertNull(testUser);
     }
 
@@ -52,9 +53,9 @@ public class UserRepositoryTests {
      */
     @Test
     public void add_add_user(){
-        User user = this.repository.getById(UserTests.testUserId);
+        User user = this.repository.getById(UserTests.TEST_USER_ID);
         this.repository.add(this.user);
-        user = this.repository.getById(UserTests.testUserId);
+        user = this.repository.getById(UserTests.TEST_USER_ID);
         assertNotNull(user);
     }
 }
