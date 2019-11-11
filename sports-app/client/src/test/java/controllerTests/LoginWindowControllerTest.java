@@ -16,7 +16,7 @@ class LoginWindowControllerTest {
     private final String ADMIN_BUTTON_TEXT = "Admin";
 
     @BeforeAll
-    static void setUpClass() throws InterruptedException {
+    public static void setUpClass() throws InterruptedException {
         System.out.println("About to launch the application");
         Thread thread = new Thread("JavaFX Init Thread") {
             public void run() {
@@ -30,22 +30,22 @@ class LoginWindowControllerTest {
     }
 
     @Test
-    void correctTextIsSetFromMethodThatSetTextOnClub() {
+    public void correctTextIsSetFromMethodThatSetTextOnClub() {
         assertEquals(CLUB_BUTTON_TEXT, loginWindowController.setTextOnLoginButtonClub());
     }
 
     @Test
-    void correctTextIsSetFromMethodThatSetTextOnAdmin() {
+    public void correctTextIsSetFromMethodThatSetTextOnAdmin() {
         assertEquals(ADMIN_BUTTON_TEXT, loginWindowController.setTextOnLoginButtonAdmin());
     }
 
     @Test
-    void checkThatClubLoginButtonHasCorrectText() {
+    public void checkThatClubLoginButtonHasCorrectText() {
         verifyThat("#loginButtonClub", hasText("Club"));
     }
 
     @Test
-    void checkThatAdminLoginButtonHasCorrectText() {
+    public void checkThatAdminLoginButtonHasCorrectText() {
         verifyThat("#loginButtonAdmin", hasText("Admin"));
     }
 
