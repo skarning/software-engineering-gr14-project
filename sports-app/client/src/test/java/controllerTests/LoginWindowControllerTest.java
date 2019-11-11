@@ -2,11 +2,16 @@ package controllerTests;
 
 import controller.LoginWindowController;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import main.MainJavaFX;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.testfx.api.FxAssert.*;
+
+import java.io.IOException;
+
+import static org.testfx.api.FxAssert.verifyThat;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
 class LoginWindowControllerTest {
@@ -30,23 +35,17 @@ class LoginWindowControllerTest {
     }
 
     @Test
-    public void correctTextIsSetFromMethodThatSetTextOnClub() {
-        assertEquals(CLUB_BUTTON_TEXT, loginWindowController.setTextOnLoginButtonClub());
+    public void verifyThatCorrectTextIsSetOnClubButtonInFxml() throws IOException {
+        Parent node = FXMLLoader.load(getClass().getResource("/view/fxml/LoginWindow.fxml"));
+        Button button = (Button) node.lookup("#loginButtonClub");
+        verifyThat(button, hasText(CLUB_BUTTON_TEXT));
     }
 
     @Test
-    public void correctTextIsSetFromMethodThatSetTextOnAdmin() {
-        assertEquals(ADMIN_BUTTON_TEXT, loginWindowController.setTextOnLoginButtonAdmin());
-    }
-
-    @Test
-    public void checkThatClubLoginButtonHasCorrectText() {
-        verifyThat("#loginButtonClub", hasText("Club"));
-    }
-
-    @Test
-    public void checkThatAdminLoginButtonHasCorrectText() {
-        verifyThat("#loginButtonAdmin", hasText("Admin"));
+    public void verifyThatCorrectTextIsSetOnAdminButtonInFxml() throws IOException {
+        Parent node = FXMLLoader.load(getClass().getResource("/view/fxml/LoginWindow.fxml"));
+        Button button = (Button) node.lookup("#loginButtonAdmin");
+        verifyThat(button, hasText(ADMIN_BUTTON_TEXT));
     }
 
 }

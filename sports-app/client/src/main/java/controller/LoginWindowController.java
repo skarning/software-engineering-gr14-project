@@ -2,27 +2,34 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import main.MainJavaFX;
 
 public class LoginWindowController implements ILoginWindowController {
 
     @FXML
-    private Button loginButtonClub, loginButtonAdmin;
+    public AnchorPane loginWindow = new AnchorPane();
+    @FXML
+    private Button loginButtonClub = new Button();
+    @FXML
+    private Button loginButtonAdmin = new Button();
 
     private MainJavaFX mainJavaFx = new MainJavaFX();
 
     public void initialize() {
-        loginButtonClub.setText(setTextOnLoginButtonClub());
-        loginButtonAdmin.setText(setTextOnLoginButtonAdmin());
     }
 
-    public String setTextOnLoginButtonClub() {
-        return "Club";
+    public Button getLoginButtonClub() {
+        return loginButtonClub;
     }
 
-    public String setTextOnLoginButtonAdmin() {
-        return "Admin";
+    public Button getLoginButtonAdmin() {
+        return loginButtonAdmin;
+    }
+
+    public AnchorPane getLoginWindow() {
+        return loginWindow;
     }
 
     @FXML
