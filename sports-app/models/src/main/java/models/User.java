@@ -1,5 +1,5 @@
 package models;
-import Enumerations.Enums;
+import enumerations.Enums;
 
 public class User extends Person {
     private int     userId;

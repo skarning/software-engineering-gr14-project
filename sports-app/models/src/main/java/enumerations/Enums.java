@@ -1,4 +1,4 @@
-package Enumerations;
+package enumerations;
 
 public class Enums {
     public static enum UserLevels {
