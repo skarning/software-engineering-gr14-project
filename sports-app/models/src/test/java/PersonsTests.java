@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonsTests {
     Person person;
 
-    protected static final int    testPersonId = 1;
-    protected static final String testFirstName = "lisa";
-    protected static final String testLastName = "prat";
-    protected static final String testFullName = "lisa prat";
-    protected static final int    testAge = 20;
+    protected static final int TEST_PERSON_ID = 1;
+    protected static final String TEST_FIRST_NAME = "lisa";
+    protected static final String TEST_LAST_NAME = "prat";
+    protected static final String TEST_FULL_NAME = "lisa prat";
+    protected static final int TEST_AGE = 20;
 
     /* Runs before each test to
     configure a new object
@@ -22,32 +22,32 @@ public class PersonsTests {
         A mock object of person is created
         to test its functionality
          */
-        this.person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.testPersonId, this.testFirstName,
-                this.testLastName, this.testAge).defaultAnswer(Mockito.CALLS_REAL_METHODS));
+        this.person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(TEST_PERSON_ID, TEST_FIRST_NAME,
+                TEST_LAST_NAME, TEST_AGE).defaultAnswer(Mockito.CALLS_REAL_METHODS));
     }
 
     @Test
     public void getFullName_firstName_lastName() {
-        assertEquals(testFullName, this.person.getFullName());
+        assertEquals(TEST_FULL_NAME, this.person.getFullName());
     }
 
     @Test
     void getFirstName_firstName() {
-        assertEquals(testFirstName, this.person.getFirstName());
+        assertEquals(TEST_FIRST_NAME, this.person.getFirstName());
     }
 
     @Test
     void getLastName_lastName() {
-        assertEquals(testLastName, this.person.getLastName());
+        assertEquals(TEST_LAST_NAME, this.person.getLastName());
     }
 
     @Test
     void getAge_age() {
-        assertEquals(testAge, this.person.getAge());
+        assertEquals(TEST_AGE, this.person.getAge());
     }
 
     @Test
     void getPersonId_personId() {
-        assertEquals(testPersonId, this.person.getPersonId());
+        assertEquals(TEST_PERSON_ID, this.person.getPersonId());
     }
 }

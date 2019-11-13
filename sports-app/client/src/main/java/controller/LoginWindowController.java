@@ -20,18 +20,6 @@ public class LoginWindowController implements ILoginWindowController {
     public void initialize() {
     }
 
-    public Button getLoginButtonClub() {
-        return loginButtonClub;
-    }
-
-    public Button getLoginButtonAdmin() {
-        return loginButtonAdmin;
-    }
-
-    public AnchorPane getLoginWindow() {
-        return loginWindow;
-    }
-
     @FXML
     @Override
     public void goToClubWindowWhenClicked() {
