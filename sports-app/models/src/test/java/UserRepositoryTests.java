@@ -12,8 +12,8 @@ public class UserRepositoryTests {
     @BeforeEach
     public void setup() {
         this.repository = new UserRepository();
-        this.user = new User(UserTests.testUserId, UserTests.testUserName, UserTests.testPassword, PersonsTests.testPersonId,
-                PersonsTests.testFirstName, PersonsTests.testLastName, PersonsTests.testAge);
+        this.user = new User(UserTests.testUserId, UserTests.testUserName, UserTests.testPassword, PersonsTests.TEST_PERSON_ID,
+                PersonsTests.TEST_FIRST_NAME, PersonsTests.TEST_LAST_NAME, PersonsTests.TEST_AGE);
     }
 
     @Test

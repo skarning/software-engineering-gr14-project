@@ -32,10 +32,6 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     @Override
     public void loginWindow() {
         try {
-            /*
-            String javaVersion = System.getProperty("java.version");
-            String javafxVersion = System.getProperty("javafx.version");
-            */
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/LoginWindow.fxml"));
             primaryStage.setTitle("Please login");
             primaryStage.setScene(new Scene(root));
