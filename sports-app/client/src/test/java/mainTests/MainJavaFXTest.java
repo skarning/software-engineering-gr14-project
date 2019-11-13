@@ -18,6 +18,7 @@ class MainJavaFXTest extends ApplicationTest {
     public static void main(String[] args) throws Exception {
         FxToolkit.registerPrimaryStage();
         FxToolkit.setupApplication(MainJavaFX.class);
+        FxToolkit.showStage();
     }
 
     @BeforeEach

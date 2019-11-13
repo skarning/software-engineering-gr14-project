@@ -23,6 +23,10 @@ public class LoginWindowController implements ILoginWindowController {
 
     private MainJavaFX mainJavaFx = new MainJavaFX();
 
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
+
     public LoginWindowController() {
         this.userRepository = new UserRepository();
     }
