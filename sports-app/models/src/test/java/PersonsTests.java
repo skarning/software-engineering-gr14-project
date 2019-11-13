@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonsTests {
     Person person;
 
-    protected static final int TEST_PERSON_ID = 1;
+    protected static final int    TEST_PERSON_ID = 1;
     protected static final String TEST_FIRST_NAME = "lisa";
     protected static final String TEST_LAST_NAME = "prat";
     protected static final String TEST_FULL_NAME = "lisa prat";
-    protected static final int TEST_AGE = 20;
+    protected static final int    TEST_AGE = 20;
 
     /* Runs before each test to
     configure a new object

@@ -16,6 +16,13 @@ public class User extends Person {
         this.userLevel = userLevel;
     }
 
+    public User(int testUserId, String testUserName, String testPassword, int testPersonId, String testFirstName, String testLastName, int testAge) {
+        super(testPersonId, testFirstName, testLastName, testAge);
+        this.userId = testUserId;
+        this.userName = testUserName;
+        this.password = testPassword;
+    }
+
     public int getUserId() { return this.userId; }
 
     public String getUserName() { return this.userName; }
