@@ -48,10 +48,12 @@ public class LoginWindowController implements ILoginWindowController {
         mainJavaFx.clubWindow(new Stage());
     }
 
+    @Override
     public void createNewLoginTestUser(Enums.UserLevels userRights) {
         User user = new User(1, "testUser", "pass", 1,
                 "test", "testesen", 12, userRights);
         ProfileHandler.setUser(user);
         this.userRepository.add(user);
     }
+
 }
