@@ -86,5 +86,10 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>no.tornado</groupId>
+            <artifactId>tornadofx-controls</artifactId>
+            <version>1.0.3</version>
+        </dependency>
     </dependencies>
 </project>
