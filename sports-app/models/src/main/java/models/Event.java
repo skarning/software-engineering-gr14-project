@@ -31,6 +31,10 @@ public class Event {
         this.eventDescription = eventDescription;
     }
 
+    public Event(){
+
+    }
+
     public void setEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
     }
