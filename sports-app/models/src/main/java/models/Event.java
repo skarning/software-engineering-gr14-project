@@ -1,22 +1,23 @@
 package models;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Event {
 
     private String eventTitle;
     private String eventDescription;
     private int eventID;
-    private Date eventStart;
-    private Date eventEnd;
+    private LocalDateTime eventStart;
+    private LocalDateTime eventEnd;
     private ArrayList<Competition> competitions;
 
-    public Event (int eventID, String eventTitle, Date eventStart, Date eventEnd, int eventStartTime, int eventEndTime){
+    public Event (int eventID, String eventTitle, LocalDateTime eventStart, LocalDateTime eventEnd, String eventDescription){
         this.eventID = eventID;
         this.eventTitle = eventTitle;
         this.eventStart = eventStart;
         this.eventEnd = eventEnd;
+        this.eventDescription = eventDescription;
         this.competitions = new ArrayList<Competition>();
     }
 
@@ -36,11 +37,11 @@ public class Event {
         return eventID;
     }
 
-    public Date getEventStartDate() {
+    public LocalDateTime getEventStartDate() {
         return eventStart;
     }
 
-    public Date getEventEndDate() {
+    public LocalDateTime getEventEndDate() {
         return eventEnd;
     }
 
