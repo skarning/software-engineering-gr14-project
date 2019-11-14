@@ -1,38 +1,20 @@
 package models;
 
+import java.util.Date;
+
 public class Event {
 
     private String eventTitle;
     private String eventDescription;
     private int eventID;
-    private int eventStartDate; // in yymmdd format
-    private int eventEndDate; // as above
-    private int eventStartTime; // in hhmm format
-    private int eventEndTime; // as above
+    private Date eventStart;
+    private Date eventEnd;
 
-    public Event (int eventID, String eventTitle, int eventStartDate, int eventEndDate, int eventStartTime, int eventEndTime){
+    public Event (int eventID, String eventTitle, Date eventStart, Date eventEnd, int eventStartTime, int eventEndTime){
         this.eventID = eventID;
         this.eventTitle = eventTitle;
-        this.eventStartDate = eventStartDate;
-        this.eventEndDate = eventEndDate;
-        this.eventStartTime = eventStartTime;
-        this.eventEndTime = eventEndTime;
-    }
-
-    // adding the description on making the event is optional
-    public Event (int eventID, String eventTitle, int eventStartDate, int eventEndDate, int eventStartTime, int eventEndTime,
-                  String eventDescription){
-        this.eventID = eventID;
-        this.eventTitle = eventTitle;
-        this.eventStartDate = eventStartDate;
-        this.eventEndDate = eventEndDate;
-        this.eventStartTime = eventStartTime;
-        this.eventEndTime = eventEndTime;
-        this.eventDescription = eventDescription;
-    }
-
-    public Event(){
-
+        this.eventStart = eventStart;
+        this.eventEnd = eventEnd;
     }
 
     public void setEventDescription(String eventDescription) {
@@ -51,19 +33,11 @@ public class Event {
         return eventID;
     }
 
-    public int getEventStartDate() {
-        return eventStartDate;
+    public Date getEventStartDate() {
+        return eventStart;
     }
 
-    public int getEventEndDate() {
-        return eventEndDate;
-    }
-
-    public int getEventStartTime() {
-        return eventStartTime;
-    }
-
-    public int getEventEndTime() {
-        return eventEndTime;
+    public Date getEventEndDate() {
+        return eventEnd;
     }
 }
