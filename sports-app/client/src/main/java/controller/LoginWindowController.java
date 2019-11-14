@@ -14,10 +14,6 @@ public class LoginWindowController implements ILoginWindowController {
 
     UserRepository userRepository;
 
-    public LoginWindowController() {
-        this.userRepository = new UserRepository();
-    }
-
     @FXML
     public AnchorPane loginWindow = new AnchorPane();
     @FXML
@@ -27,39 +23,37 @@ public class LoginWindowController implements ILoginWindowController {
 
     private MainJavaFX mainJavaFx = new MainJavaFX();
 
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
+
+    public LoginWindowController() {
+        this.userRepository = new UserRepository();
+    }
+
     public void initialize() {
     }
 
-    public Button getLoginButtonClub() {
-        return loginButtonClub;
-    }
-
-    public Button getLoginButtonAdmin() {
-        return loginButtonAdmin;
-    }
-
-    public AnchorPane getLoginWindow() {
-        return loginWindow;
-    }
-
     @FXML
     @Override
-    public void goToClubWindowWhenClicked() {
-        createNewLoginTestUser(Enums.UserLevels.club);
-        mainJavaFx.clubWindow(new Stage());
-    }
-
-    @FXML
-    @Override
-    public void goToAdminWindowWhenClicked() {
+    public void adminUserGoesToAdminStageWhenClicked() {
         createNewLoginTestUser(Enums.UserLevels.administrator);
         mainJavaFx.adminWindow(new Stage());
     }
 
+    @FXML
+    @Override
+    public void clubUserGoesToClubStageWhenClicked() {
+        createNewLoginTestUser(Enums.UserLevels.club);
+        mainJavaFx.clubWindow(new Stage());
+    }
+
+    @Override
     public void createNewLoginTestUser(Enums.UserLevels userRights) {
         User user = new User(1, "testUser", "pass", 1,
                 "test", "testesen", 12, userRights);
         ProfileHandler.setUser(user);
         this.userRepository.add(user);
     }
+
 }

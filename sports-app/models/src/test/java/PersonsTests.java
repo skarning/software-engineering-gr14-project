@@ -22,8 +22,8 @@ public class PersonsTests {
         A mock object of person is created
         to test its functionality
          */
-        this.person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(this.TEST_PERSON_ID, this.TEST_FIRST_NAME,
-                this.TEST_LAST_NAME, this.TEST_AGE).defaultAnswer(Mockito.CALLS_REAL_METHODS));
+        this.person = Mockito.mock(Person.class, Mockito.withSettings().useConstructor(TEST_PERSON_ID, TEST_FIRST_NAME,
+                TEST_LAST_NAME, TEST_AGE).defaultAnswer(Mockito.CALLS_REAL_METHODS));
     }
 
     @Test

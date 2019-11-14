@@ -15,10 +15,6 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     private Stage loginWindow;
     private static MainJavaFX application;
 
-    public Stage getLoginWindow() {
-        return loginWindow;
-    }
-
     public MainJavaFX() {
         application = this;
     }
@@ -32,10 +28,6 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     @Override
     public void loginWindow() {
         try {
-            /*
-            String javaVersion = System.getProperty("java.version");
-            String javafxVersion = System.getProperty("javafx.version");
-            */
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/LoginWindow.fxml"));
             primaryStage.setTitle("Please login");
             primaryStage.setScene(new Scene(root));
@@ -54,7 +46,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
             clubStage.setTitle("Welcome Club");
             clubStage.setScene(new Scene(root));
             clubStage.initModality(Modality.APPLICATION_MODAL);
-            clubStage.initOwner(getLoginWindow());
+            clubStage.initOwner(loginWindow);
             clubStage.show();
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
@@ -70,7 +62,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
             adminStage.setTitle("Welcome Admin");
             adminStage.setScene(new Scene(root));
             adminStage.initModality(Modality.APPLICATION_MODAL);
-            adminStage.initOwner(getLoginWindow());
+            adminStage.initOwner(loginWindow);
             adminStage.show();
         } catch (IllegalStateException ise) {
             ise.printStackTrace();

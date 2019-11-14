@@ -5,12 +5,12 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="loginWindow" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginWindowController">
-    <Button fx:id="loginButtonAdmin" text="Admin" layoutX="308.0" layoutY="168.0" onAction="#goToAdminWindowWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
+    <Button fx:id="loginButtonAdmin" text="Admin" layoutX="224.0" layoutY="168.0" onAction="#adminUserGoesToAdminStageWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
         <font>
             <Font size="15.0" />
         </font>
     </Button>
-    <Button fx:id="loginButtonClub" text="Club" layoutX="224.0" layoutY="168.0" onAction="#goToClubWindowWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
+    <Button fx:id="loginButtonClub" text="Club" layoutX="308.0" layoutY="168.0" onAction="#clubUserGoesToClubStageWhenClicked" mnemonicParsing="false" textAlignment="CENTER">
         <font>
             <Font size="15.0" />
         </font>
