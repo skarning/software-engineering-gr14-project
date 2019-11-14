@@ -51,4 +51,18 @@ public class EventTests {
     public void get_end_date_test(){
         assertEquals(testEventEndDate, event.getEventEndDate());
     }
+    @Test
+    public void set_description_on_event_without_description_test(){
+        Event testEvent = new Event(testEventID, testEventTitle, testEventStartDate, testEventEndDate, testEventStartTime,
+                testEventEndTime);
+        testEvent.setEventDescription("Morten");
+
+        assertEquals("Morten", testEvent.getEventDescription());
+    }
+    @Test
+    public void set_description_on_event_with_description_test(){
+        event.setEventDescription("Martin");
+
+        assertEquals("Martin", event.getEventDescription());
+    }
 }
