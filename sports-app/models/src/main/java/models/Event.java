@@ -12,6 +12,7 @@ public class Event {
     private LocalDateTime eventStart;
     private LocalDateTime eventEnd;
     private ArrayList<Competition> competitions;
+    private ArrayList<Participant> participants;
 
     public Event (int eventID, String eventTitle, LocalDateTime eventStart, String location, LocalDateTime eventEnd, String eventDescription){
         this.eventID = eventID;
@@ -21,7 +22,8 @@ public class Event {
         this.eventEnd = eventEnd;
 
         this.eventDescription = eventDescription;
-        this.competitions = new ArrayList<Competition>();
+        this.competitions = new ArrayList<>();
+        this.participants = new ArrayList<>();
     }
 
     public void setEventDescription(String eventDescription) {
@@ -48,7 +50,11 @@ public class Event {
         return eventEnd;
     }
 
-    public void AddCompetition(Competition competition) {
+    public void addCompetition(Competition competition) {
         competitions.add(competition);
+    }
+
+    public void addParticipant(Participant participant){
+        participants.add(participant);
     }
 }
