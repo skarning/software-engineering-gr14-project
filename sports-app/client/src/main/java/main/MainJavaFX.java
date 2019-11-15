@@ -88,6 +88,22 @@ public class MainJavaFX extends Application implements IMainJavaFX {
         }
     }
 
+    @Override
+    public void deleteEventWindow(Stage deleteEventStage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/DeleteEventWindow.fxml"));
+            deleteEventStage.setTitle("Delete an event");
+            deleteEventStage.setScene(new Scene(root));
+            deleteEventStage.initModality(Modality.APPLICATION_MODAL);
+            deleteEventStage.initOwner(clubWindow);
+            deleteEventStage.show();
+        } catch (IllegalStateException ise){
+            ise.printStackTrace();
+        } catch (IOException ioe){
+            System.out.println(ioe.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         Application.launch(args);
     }
