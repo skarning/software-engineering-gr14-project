@@ -1,16 +1,25 @@
 package models;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Competition {
-    private Result result;
+    private ArrayList<Result> results;
     private int competitionId;
     private ArrayList<Participant> participants;
-    private Date competitionStart;
+    private LocalDateTime competitionStart;
 
-    public Competition(int competitionId, Date competitionStart) {
+    public Competition(int competitionId, LocalDateTime competitionStart) {
         this.competitionId = competitionId;
         this.competitionStart = competitionStart;
+        this.results = new ArrayList<Result>();
+    }
+
+    public void addResult(Result result) {
+        for(Result localRes : results) {
+            if (result.getParticipant().equals(localRes.getParticipant()))
+                return;
+        }
+        results.add(result);
     }
 }
