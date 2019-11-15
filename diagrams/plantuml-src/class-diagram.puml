@@ -1,0 +1,109 @@
+@startuml
+top to bottom direction
+title Sports App - Class Diagram
+package Models {
+    class Event {
+        -int eventId
+        -String eventTitle
+        -String eventDescription
+        -String location
+        -LocalDateTime eventStart
+        -LocalDateTime eventEnd
+        -ArrayList<Competition> competitions
+    }
+    
+    class Competition {
+        -int competitionId
+        -Result result
+        -ArrayList<Participant> participants
+        -LocalDateTime competitionStart
+    }
+    
+    abstract class Person {
+        -int personId
+        -String firstName
+        -String lastName
+        -int age
+    }
+    
+    class Athlete {
+        -Team team
+    }
+    
+    class User {
+        -int userId
+        -String userName
+        -String password
+        -UserLevels userLevel
+    }
+    
+    class Participant {
+        -Athlete athlete
+        -int participantId
+    }
+    
+    class Team {
+        -String teamName
+        -ArrayList<Athlete> athletes;
+    }
+    
+    class Club {
+        -String clubName
+        -String location
+        -ArrayList<Team> teams
+    }
+    
+    class Result {
+        -Participant participant
+        -long time
+        -long timeDiff
+    }
+    
+    Event *-right- Competition
+    Competition *-down- Participant
+    Person <|-down- Athlete
+    Person <|-down- User
+    Participant <-- Athlete
+    Team *-left- Athlete
+    Club *-left- Team
+    Competition *-right- Result
+    Result <-- Participant
+}
+
+package Repositories {
+    interface IRepository<<T>> {
+        
+    }
+    
+    class UserRepository {
+    
+    }
+    
+    class EventRepository {
+    
+    }
+    
+    class ClubRepository {
+    
+    }
+    
+    IRepository <|-down- UserRepository
+    IRepository <|-down- EventRepository
+    IRepository <|-down- ClubRepository
+}
+
+package Client {
+    class loginWindowController {
+    }
+    
+    class clubWindowController {
+    }
+    
+    class adminWindowController {
+    }
+
+}
+
+Client --> Models
+Client--> Repositories
+@enduml

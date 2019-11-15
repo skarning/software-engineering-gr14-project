@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import tornadofx.control.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventViewController">
+
+    <TextArea fx:id="eventDescription" layoutX="149.0" layoutY="113.0" maxHeight="100" maxWidth="400" />
+    <TextField fx:id="eventName" layoutX="149.0" layoutY="65.0" prefWidth="200" />
+    <DateTimePicker fx:id="eventStartDateTimePicker" layoutX="149.0" layoutY="239.0" prefWidth="200" />
+    <DateTimePicker fx:id="eventEndDateTimePicker" layoutX="149.0" layoutY="293.0" prefWidth="200" />
+    <Button fx:id="createEventButton" layoutX="149.0" layoutY="341.0" mnemonicParsing="false" onAction="#createEvent" text="Create Event" textAlignment="CENTER">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+   <Label alignment="CENTER" layoutX="50.0" layoutY="14.0" prefHeight="27.0" prefWidth="104.0" text="Create Event" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="45.0" layoutY="68.0" prefHeight="18.0" prefWidth="55.0" text="Title :">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="45.0" layoutY="113.0" text="Description :">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="45.0" layoutY="243.0" text="Start date :">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="45.0" layoutY="297.0" text="End date :">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+</AnchorPane>

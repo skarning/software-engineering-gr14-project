@@ -2,11 +2,16 @@
 
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controller.ClubWindowController"
             prefHeight="400.0" prefWidth="600.0">
-    <children>
 
-    </children>
+    <Button fx:id="createEventButton" text="Create Event" layoutX="224.0" layoutY="168.0" onAction="#OpenCreateNewEventWindow" mnemonicParsing="false" textAlignment="CENTER">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
 </AnchorPane>

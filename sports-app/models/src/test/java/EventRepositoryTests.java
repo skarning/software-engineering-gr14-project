@@ -15,7 +15,7 @@ public class EventRepositoryTests {
     @BeforeEach
     public void setup(){
         this.repository = new EventRepository();
-        this.event = new Event(EventTests.TEST_EVENT_ID, EventTests.TEST_EVENT_TITLE, EventTests.TEST_EVENT_START, EventTests.TEST_EVENT_END,
+        this.event = new Event(EventTests.TEST_EVENT_ID, EventTests.TEST_LOCATION, EventTests.TEST_EVENT_TITLE, EventTests.TEST_EVENT_START, EventTests.TEST_EVENT_END,
                 EventTests.TEST_EVENT_DESCRIPTION);
     }
 

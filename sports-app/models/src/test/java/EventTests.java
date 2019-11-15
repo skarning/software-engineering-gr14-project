@@ -14,11 +14,12 @@ public class EventTests {
     protected static final String TEST_EVENT_DESCRIPTION = "Han har det jævlig uten internett";
     protected static final LocalDateTime TEST_EVENT_START = LocalDateTime.now();
     protected static final LocalDateTime TEST_EVENT_END = LocalDateTime.now();
+    protected static final String TEST_LOCATION = "sarpsborg";
 
 
     @BeforeEach
     public void setup(){
-        this.event = new Event(TEST_EVENT_ID, TEST_EVENT_TITLE, TEST_EVENT_START, TEST_EVENT_END, TEST_EVENT_DESCRIPTION);
+        this.event = new Event(TEST_EVENT_ID, TEST_LOCATION, TEST_EVENT_TITLE, TEST_EVENT_START, TEST_EVENT_END, TEST_EVENT_DESCRIPTION);
     }
 
     @Test

@@ -13,6 +13,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
 
     private Stage primaryStage;
     private Stage loginWindow;
+    private Stage clubWindow;
     private static MainJavaFX application;
 
     public MainJavaFX() {
@@ -64,6 +65,22 @@ public class MainJavaFX extends Application implements IMainJavaFX {
             adminStage.initModality(Modality.APPLICATION_MODAL);
             adminStage.initOwner(loginWindow);
             adminStage.show();
+        } catch (IllegalStateException ise) {
+            ise.printStackTrace();
+        } catch (IOException ioe) {
+            System.out.println(ioe.getMessage());
+        }
+    }
+
+    @Override
+    public void eventWindow(Stage eventStage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/EventWindow.fxml"));
+            eventStage.setTitle("Create New Event");
+            eventStage.setScene(new Scene(root));
+            eventStage.initModality(Modality.APPLICATION_MODAL);
+            eventStage.initOwner(clubWindow);
+            eventStage.show();
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
         } catch (IOException ioe) {
