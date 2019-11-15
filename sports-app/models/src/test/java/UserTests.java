@@ -1,3 +1,4 @@
+import enumerations.Enums;
 import models.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,25 +12,29 @@ public class UserTests {
     protected static final int    testUserId = 1;
     protected static final String testUserName = "foo";
     protected static final String testPassword = "pass";
+    protected static final Enum   testUserLevel = Enums.UserLevels.club;
 
     @BeforeEach
     public void Setup() {
-        this.user = new User(this.testUserId, this.testUserName, this.testPassword, PersonsTests.testPersonId,
-                PersonsTests.testFirstName, PersonsTests.testLastName, PersonsTests.testAge);
+        this.user = new User(testUserId, testUserName, testPassword, PersonsTests.TEST_PERSON_ID,
+                PersonsTests.TEST_FIRST_NAME, PersonsTests.TEST_LAST_NAME, PersonsTests.TEST_AGE, Enums.UserLevels.club);
     }
 
     @Test
     public void getUserId_userId(){
-        assertEquals(this.testUserId, user.getUserId());
+        assertEquals(testUserId, user.getUserId());
     }
 
     @Test
     public void getUserName_userName() {
-        assertEquals(this.testUserName, user.getUserName());
+        assertEquals(testUserName, user.getUserName());
     }
 
     @Test
     public void getPassword_password() {
-        assertEquals(this.testPassword, user.getPassword());
+        assertEquals(testPassword, user.getPassword());
     }
+
+    @Test
+    public void getUserLevel_userLevel() { assertEquals(testUserLevel, user.getUserLevel());}
  }

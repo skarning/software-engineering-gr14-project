@@ -1,6 +1,9 @@
 package controller;
 
+import enumerations.Enums;
+
 public interface ILoginWindowController {
-    void goToClubWindowWhenClicked();
-    void goToAdminWindowWhenClicked();
+    void adminUserGoesToAdminStageWhenClicked();
+    void clubUserGoesToClubStageWhenClicked();
+    void createNewLoginTestUser(Enums.UserLevels userRights);
 }
