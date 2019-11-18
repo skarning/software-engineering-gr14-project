@@ -10,10 +10,13 @@ import javafx.scene.control.Button;
 import main.MainJavaFX;
 import models.User;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.mockito.Mock;
+import repositories.MockupDatabase;
 
 import java.io.IOException;
 
@@ -65,6 +68,7 @@ class LoginWindowControllerTest {
     @Test
     @Order(4)
     void testAdminUserGoesToAdminStageWhenClicked() {
+        MockupDatabase.emptyDatabase();
         testCreateNewLoginTestUser(administratorTestLevel); //Using test method
         assertEquals(this.administratorTestLevel, this.loginWindowController.getUserRepository().getById(testUser.getUserId()).getUserLevel());
     }
@@ -80,6 +84,7 @@ class LoginWindowControllerTest {
     @EnumSource(Enums.UserLevels.class)
     @Order(6)
     void testCreateNewLoginTestUser(Enums.UserLevels userLevelsTest) {
+        MockupDatabase.emptyDatabase();
         testUser = new User(1, "testUser", "pass", 1,
                 "test", "testesen", 12, userLevelsTest);
 
