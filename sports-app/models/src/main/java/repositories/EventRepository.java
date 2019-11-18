@@ -7,15 +7,9 @@ import java.util.List;
 
 public class EventRepository implements IRepository<Event> {
 
-    ArrayList<Event> events;
-
-    public EventRepository(){
-        this.events = new ArrayList<>();
-    }
-
     @Override
     public Event getById(int id) {
-        for (Event event : events){
+        for (Event event : MockupDatabase.events){
             if (event.getEventID() == id)
                 return event;
         }
@@ -24,16 +18,16 @@ public class EventRepository implements IRepository<Event> {
 
     @Override
     public List<Event> getAll() {
-        return events;
+        return MockupDatabase.events;
     }
 
     @Override
     public void add(Event event) {
-        events.add(event);
+        MockupDatabase.events.add(event);
     }
 
     @Override
     public void delete(Event event) {
-        events.remove(event);
+        MockupDatabase.events.remove(event);
     }
 }

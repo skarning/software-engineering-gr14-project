@@ -6,6 +6,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import models.Event;
 import repositories.EventRepository;
+import repositories.UserRepository;
 import tornadofx.control.DateTimePicker;
 
 import java.time.LocalDateTime;
@@ -39,6 +40,7 @@ public class EventViewController {
         LocalDateTime endDate = startDateTime.getDateTimeValue();
 
         repository.add(new Event(1, "Sarpsborg", eventTitleText, startDate, endDate, eventDescriptionText));
-        System.out.println(repository.getById(1));
+        UserRepository repositoryTest = new UserRepository();
+        System.out.println(repositoryTest.getById(1));
     }
 }
