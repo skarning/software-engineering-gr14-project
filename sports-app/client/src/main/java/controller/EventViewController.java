@@ -6,6 +6,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import models.Event;
 import repositories.EventRepository;
+import repositories.UserRepository;
 import tornadofx.control.DateTimePicker;
 
 import java.time.LocalDateTime;
