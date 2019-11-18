@@ -57,4 +57,9 @@ public class Event {
     public void addCompetition(Competition competition) {
         competitions.add(competition);
     }
+
+    @Override
+    public String toString(){
+        return eventTitle + " " + eventID;
+    }
 }

@@ -55,5 +55,4 @@ public class LoginWindowController implements ILoginWindowController {
         ProfileHandler.setUser(user);
         this.userRepository.add(user);
     }
-
 }
