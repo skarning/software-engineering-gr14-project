@@ -24,11 +24,11 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     @Override
     public void start(Stage stage) throws Exception {
         this.primaryStage = stage;
-        loginWindow();
+        login_window();
     }
 
     @Override
-    public void loginWindow() {
+    public void login_window() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/LoginWindow.fxml"));
             primaryStage.setTitle("Please login");
@@ -42,7 +42,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     }
 
     @Override
-    public void clubWindow(Stage clubStage) {
+    public void club_window(Stage clubStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/ClubWindow.fxml"));
             clubStage.setTitle("Welcome Club");
@@ -58,7 +58,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     }
 
     @Override
-    public void adminWindow(Stage adminStage) {
+    public void admin_window(Stage adminStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/AdminWindow.fxml"));
             adminStage.setTitle("Welcome Admin");
@@ -67,7 +67,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
             adminStage.initOwner(loginWindow);
             adminStage.show();
             //Due to not implementing admin stage
-            createAlertErrorOnStage(adminStage, "Error", "Server down due to maintenance", 500);
+            create_alert_error_on_stage(adminStage, "Error", "Server down due to maintenance", 500);
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
         } catch (IOException ioe) {
@@ -76,7 +76,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
     }
 
     @Override
-    public void eventWindow(Stage eventStage) {
+    public void event_window(Stage eventStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/fxml/EventWindow.fxml"));
             eventStage.setTitle("Create New Event");
@@ -91,7 +91,7 @@ public class MainJavaFX extends Application implements IMainJavaFX {
         }
     }
 
-    private void createAlertErrorOnStage(Stage stageWithError, String alertHeaderText, String alertContextText, int errorNumber) {
+    private void create_alert_error_on_stage(Stage stageWithError, String alertHeaderText, String alertContextText, int errorNumber) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText(alertHeaderText + ": " + errorNumber);
         alert.setContentText(alertContextText);
