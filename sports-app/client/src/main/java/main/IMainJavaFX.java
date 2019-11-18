@@ -3,9 +3,8 @@ package main;
 import javafx.stage.Stage;
 
 public interface IMainJavaFX {
-    void loginWindow();
-    void clubWindow(Stage stage);
-    void adminWindow(Stage stage);
-    void eventWindow(Stage stage);
-    void deleteEventWindow(Stage stage);
+    void login_window();
+    void club_window(Stage stage);
+    void admin_window(Stage stage);
+    void event_window(Stage stage);
 }

@@ -1,6 +1,7 @@
 import models.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import repositories.MockupDatabase;
 import repositories.UserRepository;
 import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,6 +15,7 @@ public class UserRepositoryTests {
         this.repository = new UserRepository();
         this.user = new User(UserTests.testUserId, UserTests.testUserName, UserTests.testPassword, PersonsTests.TEST_PERSON_ID,
                 PersonsTests.TEST_FIRST_NAME, PersonsTests.TEST_LAST_NAME, PersonsTests.TEST_AGE);
+        MockupDatabase.emptyDatabase();
     }
 
     @Test

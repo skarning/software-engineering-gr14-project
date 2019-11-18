@@ -1,0 +1,19 @@
+@startuml
+title API behavior for GET request
+hide empty description
+state "Request OK" as Req
+[*] --> Req : Recieve GET request from application or website
+state "Send SQL statement" as Send
+Send : to database
+state "Respond" as Error
+Req --> Error : No
+Error : error
+Req -> Send : Yes
+state "Recieve data" as Receive
+Send --> Error : No
+Send --> Receive
+Receive --> Error : No
+Receive : from database
+Receive -> [*] : Send data
+Error -> [*] : Send error
+@enduml

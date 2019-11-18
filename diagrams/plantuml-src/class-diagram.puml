@@ -1,5 +1,5 @@
 @startuml
-top to bottom direction
+
 title Sports App - Class Diagram
 package Models {
     class Event {
@@ -104,6 +104,7 @@ package Client {
 
 }
 
-Client --> Models
-Client--> Repositories
+Client ---> Models
+Client -> Repositories
+
 @enduml
