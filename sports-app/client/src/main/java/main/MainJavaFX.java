@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -65,6 +66,8 @@ public class MainJavaFX extends Application implements IMainJavaFX {
             adminStage.initModality(Modality.APPLICATION_MODAL);
             adminStage.initOwner(loginWindow);
             adminStage.show();
+            //Due to not implementing admin stage
+            createAlertErrorOnStage(adminStage, "Error", "Server down due to maintenance", 500);
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
         } catch (IOException ioe) {
@@ -86,6 +89,14 @@ public class MainJavaFX extends Application implements IMainJavaFX {
         } catch (IOException ioe) {
             System.out.println(ioe.getMessage());
         }
+    }
+
+    private void createAlertErrorOnStage(Stage stageWithError, String alertHeaderText, String alertContextText, int errorNumber) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText(alertHeaderText + ": " + errorNumber);
+        alert.setContentText(alertContextText);
+        alert.show();
+        stageWithError.close();
     }
 
     public static void main(String[] args) {
