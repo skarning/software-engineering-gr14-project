@@ -10,10 +10,12 @@ import javafx.stage.Stage;
 import main.MainJavaFX;
 import models.Event;
 
-import repositories.MockupDatabase;
+import repositories.EventRepository;
 
 
 public class ClubWindowController {
+
+    private EventRepository repository;
     @FXML
     private Button CreateEventButton = new Button();
     MainJavaFX mainJavaFX = new MainJavaFX();
@@ -29,17 +31,19 @@ public class ClubWindowController {
         mainJavaFX.eventWindow(new Stage());
     }
 
-    private ObservableList<Event> eventObservableList = FXCollections.observableArrayList(MockupDatabase.events);
+    private ObservableList<Event> eventObservableList;
+
+    public ClubWindowController() {
+        repository = new EventRepository();
+    }
 
     public void initialize(){
-
+        eventObservableList = FXCollections.observableArrayList(repository.getAll());
         eventList.setItems(eventObservableList);
-
     }
 
     public void refreshClubWindow(){
         eventList.getItems().clear();
         initialize();
-        eventList.refresh();
     }
 }
