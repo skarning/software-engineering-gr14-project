@@ -33,7 +33,6 @@ public class EventViewController {
     @FXML
     TextField eventLocation = new TextField();
 
-
     @FXML
     public void createEvent() {
         String eventDescriptionText = eventDescription.getText();
