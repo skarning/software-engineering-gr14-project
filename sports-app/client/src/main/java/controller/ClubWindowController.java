@@ -36,20 +36,22 @@ public class ClubWindowController {
     @FXML
     public void OpenDeleteEventWindow() {
         mainJavaFX.delete_event_window(new Stage());
+    }
 
-    private ObservableList<Event> eventObservableList;
+    ObservableList<Event> eventObservableList;
 
     public ClubWindowController() {
-        repository = new EventRepository();
-    }
+            repository = new EventRepository();
+        }
 
-    public void initialize(){
-        eventObservableList = FXCollections.observableArrayList(repository.getAll());
-        eventList.setItems(eventObservableList);
-    }
+        @FXML
+        public void initialize () {
+            eventObservableList = FXCollections.observableArrayList(repository.getAll());
+            eventList.setItems(eventObservableList);
+        }
 
-    public void refreshClubWindow(){
-        eventList.getItems().clear();
-        initialize();
-    }
+        public void refreshClubWindow () {
+            eventList.getItems().clear();
+            initialize();
+        }
 }

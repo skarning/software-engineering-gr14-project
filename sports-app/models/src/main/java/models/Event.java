@@ -27,7 +27,7 @@ public class Event {
 
     @Override
     public String toString(){
-        return eventID + " " + eventTitle + ", start: " + eventStart + " ends: " + eventEnd;
+        return eventID + " " + eventTitle;
     }
 
     public void setEventDescription(String eventDescription) {
@@ -58,8 +58,4 @@ public class Event {
         competitions.add(competition);
     }
 
-    @Override
-    public String toString(){
-        return eventTitle + " " + eventID;
-    }
 }

@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClubWindowController">
 
-    <Button fx:id="createEventButton" layoutX="300.0" layoutY="53.0" mnemonicParsing="false" onAction="#OpenCreateNewEventWindow" text="Create Event" textAlignment="CENTER">
+    <Button fx:id="createEventButton" layoutX="305.0" layoutY="53.0" mnemonicParsing="false" onAction="#OpenCreateNewEventWindow" prefHeight="31.0" prefWidth="110.0" text="Create Event" textAlignment="CENTER">
         <font>
             <Font size="15.0" />
         </font>
@@ -18,12 +18,12 @@
          <Font size="18.0" />
       </font>
    </Label>
-   <Button fx:id="deleteEventButton" layoutX="302.0" layoutY="118.0" mnemonicParsing="false" onAction="#OpenDeleteEventWindow" text="Delete Events">
+   <Button fx:id="deleteEventButton" layoutX="306.0" layoutY="115.0" mnemonicParsing="false" onAction="#OpenDeleteEventWindow" prefHeight="31.0" prefWidth="110.0" text="Delete Events">
       <font>
          <Font size="15.0" />
       </font>
    </Button>
-   <Button fx:id="refreshClubWindowButton" layoutX="310.0" layoutY="168.0" mnemonicParsing="false" onAction="#refreshClubWindow" prefWidth="93.0" text="Refresh">
+   <Button fx:id="refreshClubWindowButton" layoutX="315.0" layoutY="201.0" mnemonicParsing="false" onAction="#refreshClubWindow" prefWidth="93.0" text="Refresh">
       <font>
          <Font size="15.0" />
       </font>
