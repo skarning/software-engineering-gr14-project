@@ -29,6 +29,8 @@ public class EventViewController {
     @FXML
     DateTimePicker startDateTime = new DateTimePicker();
 
+    @FXML
+    TextField eventLocation = new TextField();
 
 
     @FXML
@@ -37,8 +39,9 @@ public class EventViewController {
         String eventTitleText = eventName.getText();
         LocalDateTime startDate = startDateTime.getDateTimeValue();
         LocalDateTime endDate = startDateTime.getDateTimeValue();
+        String eventLocationText = eventLocation.getText();
 
-        repository.add(new Event(1, "Sarpsborg", eventTitleText, startDate, endDate, eventDescriptionText));
+        repository.add(new Event(1, eventLocationText, eventTitleText, startDate, endDate, eventDescriptionText));
         System.out.println(repository.getById(1));
     }
 }

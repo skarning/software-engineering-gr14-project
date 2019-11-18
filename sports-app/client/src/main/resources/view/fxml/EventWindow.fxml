@@ -46,5 +46,5 @@
          <Font size="14.0" />
       </font>
    </Label>
-   <TextField layoutX="149.0" layoutY="349.0" prefHeight="25.0" prefWidth="263.0" />
+   <TextField fx:id="eventLocation" layoutX="149.0" layoutY="349.0" prefHeight="25.0" prefWidth="263.0" />
 </AnchorPane>
