@@ -28,7 +28,7 @@ public class ClubWindowController {
 
     @FXML
     public void OpenCreateNewEventWindow() {
-        mainJavaFX.eventWindow(new Stage());
+        mainJavaFX.event_window(new Stage());
     }
 
     private ObservableList<Event> eventObservableList;
