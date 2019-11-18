@@ -22,12 +22,7 @@
          <Font size="15.0" />
       </font>
    </Button>
-   <Button layoutX="300.0" layoutY="185.0" mnemonicParsing="false" text="Create Results">
-      <font>
-         <Font size="15.0" />
-      </font>
-   </Button>
-   <Button fx:id="refreshClubWindowButton" layoutX="311.0" layoutY="240.0" mnemonicParsing="false" onAction="#refreshClubWindow" prefWidth="93.0" text="Refresh">
+   <Button fx:id="refreshClubWindowButton" layoutX="310.0" layoutY="168.0" mnemonicParsing="false" onAction="#refreshClubWindow" prefWidth="93.0" text="Refresh">
       <font>
          <Font size="15.0" />
       </font></Button>
