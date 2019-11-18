@@ -6,25 +6,29 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClubWindowController">
 
-    <Button fx:id="createEventButton" layoutX="386.0" layoutY="79.0" mnemonicParsing="false" onAction="#OpenCreateNewEventWindow" text="Create Event" textAlignment="CENTER">
+    <Button fx:id="createEventButton" layoutX="300.0" layoutY="53.0" mnemonicParsing="false" onAction="#OpenCreateNewEventWindow" text="Create Event" textAlignment="CENTER">
         <font>
             <Font size="15.0" />
         </font>
     </Button>
-   <ListView layoutX="25.0" layoutY="53.0" prefHeight="327.0" prefWidth="312.0" />
+   <ListView fx:id="eventList" layoutX="25.0" layoutY="53.0" prefHeight="327.0" prefWidth="244.0" />
    <Label layoutX="25.0" layoutY="24.0" prefHeight="27.0" prefWidth="120.0" text="Your Events">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Button layoutX="386.0" layoutY="135.0" mnemonicParsing="false" text="Delete Events">
+   <Button layoutX="302.0" layoutY="118.0" mnemonicParsing="false" text="Delete Events">
       <font>
          <Font size="15.0" />
       </font>
    </Button>
-   <Button layoutX="384.0" layoutY="185.0" mnemonicParsing="false" text="Create Results">
+   <Button layoutX="300.0" layoutY="185.0" mnemonicParsing="false" text="Create Results">
       <font>
          <Font size="15.0" />
       </font>
    </Button>
+   <Button fx:id="refreshClubWindowButton" layoutX="311.0" layoutY="240.0" mnemonicParsing="false" onAction="#refreshClubWindow" prefWidth="93.0" text="Refresh">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
 </AnchorPane>

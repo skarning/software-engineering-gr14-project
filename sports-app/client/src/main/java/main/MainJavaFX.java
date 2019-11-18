@@ -91,8 +91,6 @@ public class MainJavaFX extends Application implements IMainJavaFX {
         }
     }
 
-    
-
 
     private void createAlertErrorOnStage(Stage stageWithError, String alertHeaderText, String alertContextText, int errorNumber) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
