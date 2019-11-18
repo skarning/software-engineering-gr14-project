@@ -17,7 +17,9 @@ public class ClubWindowController {
 
     private EventRepository repository;
     @FXML
-    private Button CreateEventButton = new Button();
+    private Button createEventButton = new Button();
+    @FXML
+    private Button deleteEventButton = new Button();
     MainJavaFX mainJavaFX = new MainJavaFX();
 
     @FXML
@@ -30,6 +32,10 @@ public class ClubWindowController {
     public void OpenCreateNewEventWindow() {
         mainJavaFX.event_window(new Stage());
     }
+
+    @FXML
+    public void OpenDeleteEventWindow() {
+        mainJavaFX.delete_event_window(new Stage());
 
     private ObservableList<Event> eventObservableList;
 

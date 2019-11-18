@@ -25,6 +25,11 @@ public class Event {
         this.competitions = new ArrayList<>();
     }
 
+    @Override
+    public String toString(){
+        return eventID + " " + eventTitle + ", start: " + eventStart + " ends: " + eventEnd;
+    }
+
     public void setEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
     }

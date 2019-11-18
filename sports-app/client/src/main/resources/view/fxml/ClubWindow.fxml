@@ -11,13 +11,14 @@
             <Font size="15.0" />
         </font>
     </Button>
+
    <ListView fx:id="eventList" layoutX="25.0" layoutY="53.0" prefHeight="327.0" prefWidth="244.0" />
    <Label layoutX="25.0" layoutY="24.0" prefHeight="27.0" prefWidth="120.0" text="Your Events">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Button layoutX="302.0" layoutY="118.0" mnemonicParsing="false" text="Delete Events">
+   <Button fx:id="deleteEventButton" layoutX="302.0" layoutY="118.0" mnemonicParsing="false" onAction="#OpenDeleteEventWindow" text="Delete Events">
       <font>
          <Font size="15.0" />
       </font>
@@ -25,5 +26,6 @@
    <Button fx:id="refreshClubWindowButton" layoutX="310.0" layoutY="168.0" mnemonicParsing="false" onAction="#refreshClubWindow" prefWidth="93.0" text="Refresh">
       <font>
          <Font size="15.0" />
-      </font></Button>
+      </font>
+  </Button>
 </AnchorPane>
