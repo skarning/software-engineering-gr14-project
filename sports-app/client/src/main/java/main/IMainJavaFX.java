@@ -7,4 +7,5 @@ public interface IMainJavaFX {
     void club_window(Stage stage);
     void admin_window(Stage stage);
     void event_window(Stage stage);
+    void delete_event_window(Stage Stage);
 }

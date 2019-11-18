@@ -18,6 +18,6 @@ public class ClubWindowController {
     }
     @FXML
     public void OpenDeleteEventWindow() {
-        mainJavaFX.deleteEventWindow(new Stage());
+        mainJavaFX.delete_event_window(new Stage());
     }
 }

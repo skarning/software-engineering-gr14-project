@@ -1,0 +1,7 @@
+01;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
+02;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
+03;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
+04;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
+05;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
+06;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
+07;Et sted;En tittel;2019-11-20;2019-11-23;En deskripsjon
