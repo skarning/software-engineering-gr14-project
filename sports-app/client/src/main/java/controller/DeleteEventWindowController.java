@@ -39,6 +39,8 @@ public class DeleteEventWindowController {
                     @Override
                     public void handle(ActionEvent actionEvent) {
                         events.remove(nyeEvent);
+                        //When exiting delete event window, ListView updates correctly when clicking refresh button
+                        MockupDatabase.events.remove(nyeEvent);
                     }
                 });
             }

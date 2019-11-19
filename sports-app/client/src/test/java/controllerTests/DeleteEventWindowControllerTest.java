@@ -3,9 +3,6 @@ package controllerTests;
 import javafx.application.Application;
 import main.MainJavaFX;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
 
 public class DeleteEventWindowControllerTest {
 
@@ -22,11 +19,5 @@ public class DeleteEventWindowControllerTest {
         System.out.println("Success: Application has been launched");
         Thread.sleep(500);
     }
-
-    @Test
-    public void test_a_shit() throws IOException {
-
-    }
-
 
 }
