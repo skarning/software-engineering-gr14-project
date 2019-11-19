@@ -30,4 +30,14 @@ public class EventRepository implements IRepository<Event> {
     public void delete(Event event) {
         MockupDatabase.events.remove(event);
     }
+
+    @Override
+    public void removeAll() {
+        MockupDatabase.events.clear();
+    }
+
+    @Override
+    public void generateData() {
+        MockupDatabase.getGeneratedEvents();
+    }
 }

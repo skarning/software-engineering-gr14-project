@@ -10,4 +10,8 @@ public interface IRepository<T> {
     void add(T item);
 
     void delete(T item);
+
+    void removeAll();
+
+    void generateData();
 }

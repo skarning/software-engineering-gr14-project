@@ -1,5 +1,6 @@
 package repositories;
 
+import enumerations.Enums;
 import models.Event;
 import models.User;
 import java.time.LocalDateTime;
@@ -17,10 +18,13 @@ public class MockupDatabase {
         events.removeAll(events);
     }
 
-    public static void addEvents() {
+    public static void getGeneratedEvents() {
+        events.add(new Event(1, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+        events.add(new Event(2, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+        events.add(new Event(3, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+    }
 
-        events.add(new Event(01, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-        events.add(new Event(02, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-        events.add(new Event(03, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+    public static void getGeneratedUsers() {
+        users.add(new User(21, "Vlad", "Pad", 1, "Vlad", "Pad", 21, Enums.UserLevels.club));
     }
 }
