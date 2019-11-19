@@ -21,9 +21,9 @@ public class MockupDatabase {
     }
 
     public static void getGeneratedEvents() {
-        events.add(new Event(1, "Lillehammer", "OL", LocalDateTime.parse("1994"), LocalDateTime.parse("1994"), "Snø der"));
-        events.add(new Event(2, "Lillehammer", "Mimre", LocalDateTime.parse("1998"), LocalDateTime.parse("1998"), "Mindre snø der"));
-        events.add(new Event(3, "Lillehammer", "Reunion", LocalDateTime.parse("2002"), LocalDateTime.parse("2002"), "Minst snø der"));
+        events.add(new Event(1, "Lillehammer", "OL", LocalDateTime.now(), LocalDateTime.now(), "Snø der"));
+        events.add(new Event(2, "Lillehammer", "Mimre", LocalDateTime.now(), LocalDateTime.now(), "Kaldt"));
+        events.add(new Event(3, "Lillehammer", "Reunion", LocalDateTime.now(), LocalDateTime.now(), "Skirenn"));
     }
 
     public static void getGeneratedUsers() {
