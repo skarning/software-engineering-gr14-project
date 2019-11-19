@@ -1,4 +1,5 @@
 import models.Event;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.time.LocalDateTime;
@@ -9,17 +10,21 @@ public class EventTests {
 
     private Event event;
 
-    protected static final int TEST_EVENT_ID = 2;
+    protected static final int TEST_EVENT_ID = 1;
     protected static final String TEST_EVENT_TITLE = "Mortens Internettløse Dager";
     protected static final String TEST_EVENT_DESCRIPTION = "Han har det jævlig uten internett";
     protected static final LocalDateTime TEST_EVENT_START = LocalDateTime.now();
     protected static final LocalDateTime TEST_EVENT_END = LocalDateTime.now();
     protected static final String TEST_LOCATION = "sarpsborg";
 
-
     @BeforeEach
     public void setup(){
         this.event = new Event(TEST_LOCATION, TEST_EVENT_TITLE, TEST_EVENT_START, TEST_EVENT_END, TEST_EVENT_DESCRIPTION);
+    }
+
+    @AfterEach
+    public void endup(){
+        event.reset_IdCounter();
     }
 
     @Test
@@ -29,7 +34,8 @@ public class EventTests {
 
     @Test
     public void iD_counter_test(){
-        assertEquals(1, event.getEventID());
+        Event event2 = new Event(TEST_LOCATION, TEST_EVENT_TITLE, TEST_EVENT_START, TEST_EVENT_END, TEST_EVENT_DESCRIPTION);
+        assertEquals(2, event2.getEventID());
     }
 
     @Test

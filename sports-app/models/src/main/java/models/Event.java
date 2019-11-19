@@ -30,7 +30,15 @@ public class Event {
 
     @Override
     public String toString(){
-        return eventID + " " + eventTitle;
+        return "ID: "+ eventID + ", Title: " + eventTitle;
+    }
+
+    public void addCompetition(Competition competition) {
+        competitions.add(competition);
+    }
+
+    public void reset_IdCounter(){
+        idCounter = 0;
     }
 
     public void setEventDescription(String eventDescription) {
@@ -55,10 +63,6 @@ public class Event {
 
     public LocalDateTime getEventEndDate() {
         return eventEnd;
-    }
-
-    public void addCompetition(Competition competition) {
-        competitions.add(competition);
     }
 
 }
