@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import models.Event;
+import repositories.EventRepository;
 import repositories.MockupDatabase;
 
 import java.util.ArrayList;
@@ -24,18 +25,18 @@ public class DeleteEventWindowController {
     @FXML
     private Button deleteAllEvents = new Button();
 
-    private ObservableList<Event> events = FXCollections.observableArrayList(MockupDatabase.events);
+    private EventRepository eventRepository = new EventRepository();
+    private ObservableList<Event> events = FXCollections.observableArrayList(eventRepository.getAll());
+
 
     @FXML
     public void initialize() {
 
-        // denne kommer til å lage nye objekter hver gang vinduet åpnes
-        // med andre ord, de slettes ikke permanent
-        if (MockupDatabase.events.isEmpty()){
-            MockupDatabase.addEvents();
+        if (events.isEmpty()){
+            eventRepository.generateData();
         }
-
         eventListView.setItems(events);
+
 
         eventListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Event>() {
             @Override
@@ -45,7 +46,8 @@ public class DeleteEventWindowController {
                     public void handle(ActionEvent actionEvent) {
                         events.remove(nyeEvent);
                         //When exiting delete event window, ListView updates correctly when clicking refresh button
-                        MockupDatabase.events.remove(nyeEvent);
+                        EventRepository eventRepository = new EventRepository();
+                        eventRepository.delete(nyeEvent);
                     }
                 });
             }
@@ -57,6 +59,8 @@ public class DeleteEventWindowController {
     @FXML
     public void deleteAllEvents(ActionEvent actionEvent) {
         eventListView.getItems().clear();
-        MockupDatabase.events.clear();
+
+        EventRepository eventRepository = new EventRepository();
+        eventRepository.removeAll();
     }
 }

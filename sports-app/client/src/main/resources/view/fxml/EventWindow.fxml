@@ -9,8 +9,8 @@
 
     <TextArea fx:id="eventDescription" layoutX="149.0" layoutY="113.0" maxHeight="100" maxWidth="400" />
     <TextField fx:id="eventName" layoutX="149.0" layoutY="65.0" prefWidth="200" />
-    <DateTimePicker fx:id="eventStartDateTimePicker" layoutX="149.0" layoutY="239.0" prefWidth="200" />
-    <DateTimePicker fx:id="eventEndDateTimePicker" layoutX="149.0" layoutY="293.0" prefWidth="200" />
+    <DateTimePicker fx:id="startDateTime" layoutX="149.0" layoutY="239.0" prefWidth="200" />
+    <DateTimePicker fx:id="endDateTime" layoutX="149.0" layoutY="293.0" prefWidth="200" />
     <Button fx:id="createEventButton" layoutX="149.0" layoutY="391.0" mnemonicParsing="false" onAction="#createEvent" text="Create Event" textAlignment="CENTER">
         <font>
             <Font size="15.0" />
