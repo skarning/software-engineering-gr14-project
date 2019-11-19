@@ -48,5 +48,4 @@ public class DeleteEventWindowController {
 
         eventListView.getSelectionModel().select(0);
     }
-
 }
