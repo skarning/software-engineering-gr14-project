@@ -1,8 +1,6 @@
 package repositories;
 
 import models.Event;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class EventRepository implements IRepository<Event> {
