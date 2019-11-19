@@ -18,7 +18,7 @@
          <Font size="18.0" />
       </font>
    </Label>
-   <Button fx:id="deleteEventButton" layoutX="306.0" layoutY="115.0" mnemonicParsing="false" onAction="#OpenDeleteEventWindow" prefHeight="31.0" prefWidth="110.0" text="Delete Events">
+   <Button fx:id="deleteEventButton" layoutX="307.0" layoutY="96.0" mnemonicParsing="false" onAction="#OpenDeleteEventWindow" prefHeight="31.0" prefWidth="110.0" text="Delete Events">
       <font>
          <Font size="15.0" />
       </font>
@@ -28,4 +28,9 @@
          <Font size="15.0" />
       </font>
   </Button>
+    <Button fx:id="generateEventsWindowButton" layoutX="280.0" layoutY="135.0" mnemonicParsing="false" onAction="#generatePreviousEventsArrangedByClub" prefHeight="31.0" prefWidth="163.0" text="See Club's previous Events">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
 </AnchorPane>

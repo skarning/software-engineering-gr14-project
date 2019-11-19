@@ -1,8 +1,6 @@
 package repositories;
 
 import models.Event;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class EventRepository implements IRepository<Event> {
@@ -30,5 +28,15 @@ public class EventRepository implements IRepository<Event> {
     @Override
     public void delete(Event event) {
         MockupDatabase.events.remove(event);
+    }
+
+    @Override
+    public void removeAll() {
+        MockupDatabase.events.clear();
+    }
+
+    @Override
+    public void generateData() {
+        MockupDatabase.getGeneratedEvents();
     }
 }

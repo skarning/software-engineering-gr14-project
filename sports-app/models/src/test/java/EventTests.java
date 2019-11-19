@@ -23,7 +23,7 @@ public class EventTests {
     }
 
     @AfterEach
-    public void endup(){
+    public void ending_event_tests(){
         event.reset_IdCounter();
     }
 

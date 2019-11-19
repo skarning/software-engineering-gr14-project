@@ -1,7 +1,6 @@
 package repositories;
 
 import models.User;
-
 import java.util.ArrayList;
 
 public class UserRepository implements IRepository<User>{
@@ -28,5 +27,15 @@ public class UserRepository implements IRepository<User>{
     @Override
     public void delete(User user) {
         MockupDatabase.users.remove(user);
+    }
+
+    @Override
+    public void removeAll() {
+        MockupDatabase.events.clear();
+    }
+
+    @Override
+    public void generateData() {
+        MockupDatabase.getGeneratedUsers();
     }
 }

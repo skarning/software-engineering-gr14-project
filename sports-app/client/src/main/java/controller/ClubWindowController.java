@@ -16,11 +16,13 @@ import repositories.EventRepository;
 public class ClubWindowController {
 
     private EventRepository repository;
+    private MainJavaFX mainJavaFX = new MainJavaFX();
     @FXML
     private Button createEventButton = new Button();
     @FXML
     private Button deleteEventButton = new Button();
-    MainJavaFX mainJavaFX = new MainJavaFX();
+    @FXML
+    public Button generateEventsWindowButton = new Button();
 
     @FXML
     private ListView<Event> eventList;
@@ -38,15 +40,13 @@ public class ClubWindowController {
         mainJavaFX.delete_event_window(new Stage());
     }
 
-    ObservableList<Event> eventObservableList;
-
     public ClubWindowController() {
             repository = new EventRepository();
         }
 
         @FXML
-        public void initialize () {
-            eventObservableList = FXCollections.observableArrayList(repository.getAll());
+        public void initialize() {
+            ObservableList<Event> eventObservableList = FXCollections.observableArrayList(repository.getAll());
             eventList.setItems(eventObservableList);
         }
 
@@ -54,4 +54,9 @@ public class ClubWindowController {
             eventList.getItems().clear();
             initialize();
         }
+
+
+    public void generatePreviousEventsArrangedByClub(ActionEvent actionEvent) {
+        if (repository.getAll().isEmpty()) repository.generateData();
+    }
 }
