@@ -21,20 +21,17 @@ public class MockupDatabase {
     }
 
     public static void getGeneratedEvents() {
-        events.add(new Event(1, "Lillehammer", "OL", LocalDateTime.now(), LocalDateTime.now(), "Snø der"));
-        events.add(new Event(2, "Lillehammer", "Mimre", LocalDateTime.now(), LocalDateTime.now(), "Kaldt"));
-        events.add(new Event(3, "Lillehammer", "Reunion", LocalDateTime.now(), LocalDateTime.now(), "Skirenn"));
+        events.add(new Event("Lillehammer", "OL", LocalDateTime.now(), LocalDateTime.now(), "Snø der"));
+        events.add(new Event("Lillehammer", "Mimre", LocalDateTime.now(), LocalDateTime.now(), "Kaldt"));
+        events.add(new Event("Lillehammer", "Reunion", LocalDateTime.now(), LocalDateTime.now(), "Skirenn"));
     }
 
     public static void getGeneratedUsers() {
         users.add(new User(21, "Vlad", "Pad", 1, "Vlad", "Pad", 21, Enums.UserLevels.club));
     }
 
-
-
     public static void getGeneratedCompetitions() {
         competitions.add(new Competition(1, LocalDateTime.now()));
-
 
     }
 
@@ -44,11 +41,9 @@ public class MockupDatabase {
 
     private static void generateResults() {
 
-<<<<<<< HEAD
         events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
         events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
         events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-=======
->>>>>>> master
+
     }
 }
