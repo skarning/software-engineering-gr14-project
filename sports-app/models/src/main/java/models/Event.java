@@ -14,8 +14,11 @@ public class Event {
     private LocalDateTime eventEnd;
     private ArrayList<Competition> competitions;
 
-    public Event (int eventID, String location, String eventTitle, LocalDateTime eventStart, LocalDateTime eventEnd, String eventDescription){
-        this.eventID = eventID;
+    private static int idCounter = 0;
+
+    public Event (String location, String eventTitle, LocalDateTime eventStart, LocalDateTime eventEnd, String eventDescription){
+        idCounter++;
+        this.eventID = idCounter;
         this.eventTitle = eventTitle;
         this.location = location;
         this.eventStart = eventStart;

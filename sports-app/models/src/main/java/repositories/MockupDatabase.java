@@ -19,8 +19,8 @@ public class MockupDatabase {
 
     public static void addEvents() {
 
-        events.add(new Event(01, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-        events.add(new Event(02, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-        events.add(new Event(03, "et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+        events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+        events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
+        events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
     }
 }

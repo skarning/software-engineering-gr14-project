@@ -7,6 +7,8 @@ import java.util.List;
 
 public class EventRepository implements IRepository<Event> {
 
+
+
     @Override
     public Event getById(int id) {
         for (Event event : MockupDatabase.events){
@@ -23,6 +25,7 @@ public class EventRepository implements IRepository<Event> {
 
     @Override
     public void add(Event event) {
+
         MockupDatabase.events.add(event);
     }
 

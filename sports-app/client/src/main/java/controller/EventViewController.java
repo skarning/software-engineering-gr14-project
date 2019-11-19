@@ -12,6 +12,7 @@ import tornadofx.control.DateTimePicker;
 import java.time.LocalDateTime;
 
 public class EventViewController {
+
     EventRepository repository;
 
     public EventViewController() {
@@ -41,7 +42,8 @@ public class EventViewController {
         LocalDateTime endDate = startDateTime.getDateTimeValue();
         String eventLocationText = eventLocation.getText();
 
-        repository.add(new Event(1, eventLocationText, eventTitleText, startDate, endDate, eventDescriptionText));
+
+        repository.add(new Event(eventLocationText, eventTitleText, startDate, endDate, eventDescriptionText));
         System.out.println(repository.getById(1));
     }
 }
