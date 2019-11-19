@@ -12,12 +12,19 @@ import javafx.scene.control.ListView;
 import models.Event;
 import repositories.MockupDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class DeleteEventWindowController {
     @FXML
     private Button deleteEvent = new Button();
     @FXML
     private ListView<Event> eventListView = new ListView<Event>();
+    @FXML
+    private Button deleteAllEvents = new Button();
+
+    private ObservableList<Event> events = FXCollections.observableArrayList(MockupDatabase.events);
 
     @FXML
     public void initialize() {
@@ -27,8 +34,6 @@ public class DeleteEventWindowController {
         if (MockupDatabase.events.isEmpty()){
             MockupDatabase.addEvents();
         }
-
-        ObservableList<Event> events = FXCollections.observableArrayList(MockupDatabase.events);
 
         eventListView.setItems(events);
 
@@ -49,4 +54,9 @@ public class DeleteEventWindowController {
         eventListView.getSelectionModel().select(0);
     }
 
+    @FXML
+    public void deleteAllEvents(ActionEvent actionEvent) {
+        eventListView.getItems().clear();
+        MockupDatabase.events.clear();
+    }
 }
