@@ -1,0 +1,16 @@
+@startuml
+
+title Club wants to see details of an Event on a certain date
+start
+:Open Application;
+:See calendar;
+repeat :Check if correct month is shown in calendar;
+backward: Choose a different month;
+repeat while (Is correct month shown?) is (No)
+-> Yes;
+:Click on day;
+:Click on Event;
+:See details;
+stop
+
+@enduml
