@@ -12,6 +12,4 @@ public interface IRepository<T> {
     void delete(T item);
 
     void removeAll();
-
-    void generateData();
 }

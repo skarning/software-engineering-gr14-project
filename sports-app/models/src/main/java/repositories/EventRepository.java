@@ -35,8 +35,4 @@ public class EventRepository implements IRepository<Event> {
         MockupDatabase.events.clear();
     }
 
-    @Override
-    public void generateData() {
-        MockupDatabase.getGeneratedEvents();
-    }
 }

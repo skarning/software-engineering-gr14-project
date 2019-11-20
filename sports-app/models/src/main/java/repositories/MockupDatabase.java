@@ -19,18 +19,4 @@ public class MockupDatabase {
         users.removeAll(users);
         events.removeAll(events);
     }
-
-    public static void getGeneratedEvents() {
-        events.add(new Event("Lillehammer", "OL", LocalDateTime.now(), LocalDateTime.now(), "Snø der"));
-        events.add(new Event("Lillehammer", "Mimre", LocalDateTime.now(), LocalDateTime.now(), "Kaldt"));
-        events.add(new Event("Lillehammer", "Reunion", LocalDateTime.now(), LocalDateTime.now(), "Skirenn"));
-    }
-
-    public static void getGeneratedUsers() {
-        users.add(new User(21, "Vlad", "Pad", 1, "Vlad", "Pad", 21, Enums.UserLevels.club));
-    }
-
-    public static void getGeneratedCompetitions() {
-        competitions.add(new Competition(1, LocalDateTime.now()));
-    }
 }
