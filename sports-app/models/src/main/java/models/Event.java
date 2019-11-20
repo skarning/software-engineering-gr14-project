@@ -1,5 +1,7 @@
 package models;
 
+import repositories.IdRepository;
+
 import java.util.ArrayList;
 import java.time.LocalDateTime;
 
@@ -29,7 +31,10 @@ public class Event {
     }
 
     public static boolean id_is_unique() {
-        
+        if (IdRepository.getAll().contains(idCounter)){
+            return true;
+        }
+        return false;
     }
 
     @Override
