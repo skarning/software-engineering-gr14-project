@@ -56,7 +56,7 @@ public class ClubWindowController {
         }
 
 
-    public void generateEvents(ActionEvent actionEvent) {
+    public void generatePreviousEventsArrangedByClub(ActionEvent actionEvent) {
         if (repository.getAll().isEmpty()) repository.generateData();
     }
 }

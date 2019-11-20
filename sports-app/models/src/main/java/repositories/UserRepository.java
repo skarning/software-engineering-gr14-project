@@ -1,10 +1,7 @@
 package repositories;
 
-import models.Event;
 import models.User;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class UserRepository implements IRepository<User>{
 
