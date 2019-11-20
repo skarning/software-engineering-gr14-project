@@ -33,9 +33,4 @@ public class UserRepository implements IRepository<User>{
     public void removeAll() {
         MockupDatabase.events.clear();
     }
-
-    @Override
-    public void generateData() {
-        MockupDatabase.getGeneratedUsers();
-    }
 }

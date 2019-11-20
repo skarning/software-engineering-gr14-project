@@ -54,9 +54,4 @@ public class ClubWindowController {
             eventList.getItems().clear();
             initialize();
         }
-
-
-    public void generatePreviousEventsArrangedByClub(ActionEvent actionEvent) {
-        if (repository.getAll().isEmpty()) repository.generateData();
-    }
 }

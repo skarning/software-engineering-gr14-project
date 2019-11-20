@@ -19,5 +19,4 @@ public class DeleteEventWindowControllerTest {
         System.out.println("Success: Application has been launched");
         Thread.sleep(500);
     }
-
 }
