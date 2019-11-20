@@ -1,0 +1,31 @@
+@startuml
+title Club sees competitions in Event
+
+actor Club
+participant Application
+database API
+database Database
+
+Club -> Application: Clicks on an Event
+activate Application
+
+Application -> API: Get Competitions in Event
+activate API
+
+API -> Database: Upload Competition data
+activate Database
+
+Database -> API: Response
+deactivate Database
+
+alt Success
+    API -[#green]-> Application: Success
+else Error
+    API -[#red]-> Application: Failure
+    deactivate API
+end
+
+Application -> Club: Club sees the Event's competitions
+deactivate Application
+
+@enduml
