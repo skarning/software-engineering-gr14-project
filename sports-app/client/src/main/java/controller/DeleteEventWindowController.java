@@ -32,9 +32,7 @@ public class DeleteEventWindowController {
 
     @FXML
     public void deleteSelectedEvents() {
-        for(Event event : eventListView.getSelectionModel().getSelectedItems()) {
-            eventRepository.delete(event);
-        }
+        eventRepository.delete(eventListView.getSelectionModel().getSelectedItem());
         initialize();
     }
 }

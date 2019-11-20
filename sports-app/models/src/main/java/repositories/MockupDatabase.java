@@ -32,18 +32,5 @@ public class MockupDatabase {
 
     public static void getGeneratedCompetitions() {
         competitions.add(new Competition(1, LocalDateTime.now()));
-
-    }
-
-    private static void generateParticipant() {
-
-    }
-
-    private static void generateResults() {
-
-        events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-        events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-        events.add(new Event("et sted", "en tittel", LocalDateTime.now(), LocalDateTime.now(), "en desk" ));
-
     }
 }
