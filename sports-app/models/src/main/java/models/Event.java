@@ -31,10 +31,11 @@ public class Event {
     }
 
     public static boolean id_is_unique() {
-        if (IdRepository.getAll().contains(idCounter)){
-            return true;
+        IdRepository repository = new IdRepository();
+        if (repository.getAll().contains(idCounter)){
+            return false;
         }
-        return false;
+        return true;
     }
 
     @Override
