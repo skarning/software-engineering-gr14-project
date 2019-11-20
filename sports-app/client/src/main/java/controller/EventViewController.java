@@ -46,7 +46,11 @@ public class EventViewController {
         LocalDateTime endDate = endDateTime.getDateTimeValue();
         String eventLocationText = eventLocation.getText();
 
-        repository.add(new Event(eventLocationText, eventTitleText, startDate, endDate, eventDescriptionText));
-        System.out.println(repository.getById(1));
+        addEvent(eventLocationText, eventTitleText, startDate, endDate, eventDescriptionText);
+    }
+
+    public void addEvent(String eventLocation, String eventTitle, LocalDateTime startDate
+                         , LocalDateTime endDate, String eventDescription ) {
+        repository.add(new Event(eventLocation, eventTitle, startDate, endDate, eventDescription));
     }
 }

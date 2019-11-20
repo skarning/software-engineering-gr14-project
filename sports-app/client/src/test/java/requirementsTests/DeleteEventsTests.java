@@ -37,7 +37,7 @@ public class DeleteEventsTests {
     public void init() {
         controller = new DeleteEventWindowController();
         repository = new EventRepository();
-        MockupDatabase.emptyDatabase();
+        repository.removeAll();
         repository.add(new Event("sarp", "title", LocalDateTime.now(), LocalDateTime.now(), "test"));
         repository.add(new Event("sarp", "testtitle", LocalDateTime.now(), LocalDateTime.now(), "test"));
         controller.initialize();
