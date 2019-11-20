@@ -1,0 +1,8 @@
+@startuml
+
+Club --> (Delete this clubs events)
+
+Administrator --> (Delete all clubs events)
+Administrator --> (Delete finished events)
+
+@enduml
