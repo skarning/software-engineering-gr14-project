@@ -28,9 +28,4 @@
          <Font size="15.0" />
       </font>
   </Button>
-    <Button fx:id="generateEventsWindowButton" layoutX="280.0" layoutY="135.0" mnemonicParsing="false" onAction="#generatePreviousEventsArrangedByClub" prefHeight="31.0" prefWidth="163.0" text="See Club's previous Events">
-        <font>
-            <Font size="15.0" />
-        </font>
-    </Button>
 </AnchorPane>
