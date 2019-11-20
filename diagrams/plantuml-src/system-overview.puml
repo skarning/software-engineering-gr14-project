@@ -1,0 +1,19 @@
+@startuml
+
+title System Overview
+
+cloud "REST API" as api
+
+node "Application\n\n protptype" as app
+
+node "\nWebsite\n" as website
+
+database "MySQL Database\n\n\n" as database {
+
+}
+
+database <-down-> api
+api <-down-> website
+api <-down-> app
+
+@enduml
