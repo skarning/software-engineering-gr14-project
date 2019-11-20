@@ -28,6 +28,10 @@ public class Event {
         this.competitions = new ArrayList<>();
     }
 
+    public static boolean id_is_unique() {
+        
+    }
+
     @Override
     public String toString(){
         return "ID: "+ eventID + ", Title: " + eventTitle;
