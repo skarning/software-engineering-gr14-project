@@ -1,0 +1,31 @@
+@startuml
+title Club adds an Event
+
+actor Club
+participant Application
+database API
+database Database
+
+Club -> Application: Add an Event
+activate Application
+
+Application -> API: Validate Event data
+activate API
+
+API -> Database: Upload Event data
+activate Database
+
+Database -> API: Response
+deactivate Database
+
+alt Success
+    API -[#green]-> Application: Event added: Success
+else Error
+    API -[#red]-> Application: Event added: Failure
+    deactivate API
+end
+
+Application -> Club: Club sees Event if Success
+deactivate Application
+
+@enduml
