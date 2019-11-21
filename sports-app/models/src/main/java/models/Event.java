@@ -1,7 +1,10 @@
 package models;
 
+import repositories.IdRepository;
+
 import java.util.ArrayList;
 import java.time.LocalDateTime;
+import java.util.Collections;
 
 public class Event {
 
@@ -17,6 +20,9 @@ public class Event {
     private static int idCounter = 0;
 
     public Event (String location, String eventTitle, LocalDateTime eventStart, LocalDateTime eventEnd, String eventDescription){
+        while(id_is_unique() == false){
+            idCounter++;
+        }
         idCounter++;
         this.eventID = idCounter;
         this.eventTitle = eventTitle;
@@ -26,6 +32,15 @@ public class Event {
 
         this.eventDescription = eventDescription;
         this.competitions = new ArrayList<>();
+    }
+
+    public static boolean id_is_unique() {
+        IdRepository repository = new IdRepository();
+        
+        if (!repository.getAll().contains(idCounter) || repository.getAll().isEmpty()){
+            return true;
+        } else
+            return false;
     }
 
     @Override
