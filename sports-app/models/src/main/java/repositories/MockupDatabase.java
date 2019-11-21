@@ -13,7 +13,7 @@ public class MockupDatabase {
     public static ArrayList<Competition> competitions = new ArrayList<Competition>();
     public static ArrayList<Result> results = new ArrayList<Result>();
     public static ArrayList<Participant> participants = new ArrayList<Participant>();
-
+    public static ArrayList<Integer> eventsID = new ArrayList<Integer>();
 
     public static void emptyDatabase() {
         users.removeAll(users);
