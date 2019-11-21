@@ -14,7 +14,7 @@ package Models {
     
     class Competition {
         -int competitionId
-        -Result result
+        -ArrayList<Result> results
         -ArrayList<Participant> participants
         -LocalDateTime competitionStart
     }
@@ -63,11 +63,11 @@ package Models {
     Competition *-down- Participant
     Person <|-down- Athlete
     Person <|-down- User
-    Participant <-- Athlete
+    Participant --> Athlete
     Team *-left- Athlete
     Club *-left- Team
     Competition *-right- Result
-    Result <-- Participant
+    Result --> Participant
 }
 
 package Repositories {
@@ -87,9 +87,14 @@ package Repositories {
     
     }
     
+    class IdRepository {
+    
+    }
+    
     IRepository <|-down- UserRepository
     IRepository <|-down- EventRepository
     IRepository <|-down- ClubRepository
+    IRepository <|-down- IdRepository
 }
 
 package Client {
@@ -101,10 +106,18 @@ package Client {
     
     class adminWindowController {
     }
-
+    
+    class deletEventWindowController {
+    
+    }
+    
+    class eventViewController {
+    
+    }
+    
 }
 
-Client ---> Models
-Client -> Repositories
+Client --- Models
+Client - Repositories
 
 @enduml

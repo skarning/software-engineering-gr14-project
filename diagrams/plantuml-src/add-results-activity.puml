@@ -1,0 +1,19 @@
+@startuml
+
+title Adding results - Activity Diagram 
+
+
+start
+
+while (More participants in competition?)  is (Yes)
+  :Add time;
+  :Add timediff;
+  :Add participant;
+  :new Result;
+endwhile (No)
+
+:Upload results;
+
+stop
+
+@enduml
