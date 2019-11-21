@@ -1,0 +1,16 @@
+@startuml
+
+title Delete events
+[*] --> dew
+
+state "Delete Event Window" as dew {
+  state "Select event" as se
+  state "Delete event" as de
+  state "Delete all events" as dae
+  se --> de
+  de --> se
+  se --> dae
+  de --> dae
+}
+
+@enduml
