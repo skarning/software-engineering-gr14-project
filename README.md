@@ -3,7 +3,7 @@ Gruppeprosjekt for Software engineering and testing
 
 This software requires the use of Java, JavaFX, and JUnit. It has been developed in IntelliJ, and as such is guaranteed to work in that IDE assuming the setup is otherwise correct.
 
-///JavaFX
+////JavaFX
 
 To properly run a JavaFX application, one first needs to go through a few hoops.
 1) First you will have to tell IntelliJ where to find the JavaFX library files by adding them under File -> Settings -> Appearance & Behavior -> Path Variables. Add a new variable, give it the name PATH_TO_FX (or any other name - edit step 3 accordingly) and give it the path to your JavaFX library installation as its value (e.g. C:\Program Files\javafx-sdk-13.0.1\lib).
